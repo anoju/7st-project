@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">인재채용</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">회사소개</a></li>
+                        <li><strong>인재채용</strong></li>
+                    </ul>
+                </div>
+                <div class="form_box">
+					<div class="txt">
+                        <h4>7번가피자와 함께 성장할 인재를 채용합니다.</h4>                        
+					</div>
+                    <div class="tbl">
+                        <div class="col">
+                            <div class="form_list">
+                                <ul>
+                                    <li>
+                                        <strong>이름</strong>
+                                        <div class="inp_wid"><input type="text" class="input col" placeholder="이름 입력" title="이름 입력" /></div>
+                                    </li>
+                                    <li>
+                                        <strong>휴대폰번호</strong>
+                                        <div class="inp_wid wid3">
+                                            <select name="" id="" class="select col" title="휴대폰 앞자리">
+                                                <option value="010">010</option>
+                                            </select>
+                                            <input type="text" class="input col" title="휴대폰 중간자리" />
+                                            <input type="text" class="input col" title="휴대폰 뒷자리" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong>이메일</strong>
+                                        <div class="inp_mail">
+                                            <input type="text" class="input" title="이메일 앞자리" />
+                                            <span>@</span>
+                                            <input type="text" class="input readonly" title="이메일 뒷자리" readonly="readonly" />
+                                            <select name="" id="" class="select" title="메일선택">
+                                                <option value="">선택</option>
+                                                <option value="">직접입력</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong>내용</strong>
+                                        <div><textarea class="textarea" placeholder="창업상담을 사전 예약하실 경우, &#13;&#10;창업상담을 예약합니다 라고 기재해주세요.&#13;&#10;(사전예약 혜택)" title="내용 입력"></textarea></div>
+                                    </li>
+                                    <li>
+                                        <strong>첨부파일</strong>
+                                        <div>
+                                            <div class="inp_file">
+                                                <input class="input" type="text" placeholder="첨부파일을 선택해주세요." title="첨부파일 선택">
+                                                <span class="btn_file">
+                                                    <a href="#" class="button btn_gray">파일 찾기</a>
+                                                    <input type="file" placeholder="내용입력" title="파일첨부">
+                                                </span>
+                                            </div>
+                                            <p class="fz_dw mt10">용량 1M 미만 (zip, jpg, gif, bmp)</p>
+                                        </div>
+                                    </li>              
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="rules_txt" tabindex="0">
+                                개인정보 수집 및 이용목적 <br />
+                                개인정보 수집 및 이용목적 <br />
+                                개인정보 수집 및 이용목적 <br />
+                                개인정보 수집 및 이용목적 <br />
+                                개인정보 수집 및 이용목적 <br />
+                                개인정보 수집 및 이용목적 <br />
+                                개인정보 수집 및 이용목적 <br />
+                                개인정보 수집 및 이용목적 <br />
+                                개인정보 수집 및 이용목적 <br />
+                            </div>
+                            <p>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="chkAgree" id="" /><i></i>
+                                    <span class="lbl">개인정보 수집 및 이용목적에 동의합니다.</span>
+                                </label>
+                            </p>
+                            <br />
+                            <div class="g-recaptcha" data-sitekey="6Le-rlwUAAAAANP-Qt4ILNQ3XHHF6LfZn3RIEyVY"></div> <!-- 구글 key값 변경해주세요 -->
+                            <div class="button_wrap">
+                                <a href="#" class="button btn_red">채용등록</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="txt">
+                        <br />
+						<ul class="txt_list">
+                            <li>동종업계 유경험자 우대</li>
+                            <li><strong>매장직 :</strong> 매장관리 / 피자메이크 / 배달직</li>
+                            <li><strong>사무직 :</strong> 가맹영업직</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">회원가입</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>회원가입</strong></li>
+                    </ul>                    
+                </div>
+                <div class="join_flow_wrap">
+                    <ol class="join_flow">
+                        <li>STEP 1 <span>회원선택</span></li>
+                        <li>STEP 2 <span>본인확인</span></li>
+                        <li class="on">STEP 3 <span>정보입력</span></li>
+                        <li>STEP 4 <span>가입완료</span></li>
+                    </ol>
+                </div>
+
+                <div class="member_box step3">
+                    <div class="tbl">
+                        <div class="col">
+                            <h4>이용약관동의(필수)</h4>
+                            <p class="all_chk">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="allAgree" id="" /><i></i>
+                                    <strong class="lbl">전체동의</strong>
+                                </label>
+                            </p>
+                            <ul class="agree_list">
+                                <li>
+                                    <div class="chk">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="chkAgree" id="" /><i></i>
+                                            <span class="lbl">서비스 이용약관</span>
+                                        </label>
+                                        <a href="#" class="t_link_arr">내용보기</a>
+                                    </div>
+                                    <div class="rules_txt" tabindex="0">
+                                        이용약관 <br />이용약관 <br />이용약관 <br />이용약관 <br />이용약관 <br />이용약관 <br />이용약관 <br />이용약관 <br />이용약관 <br />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chk">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="chkAgree" id="" /><i></i>
+                                            <span class="lbl">개인정보 수집 및 이용안내</span>
+                                        </label>
+                                        <a href="#" class="t_link_arr">내용보기</a>
+                                    </div>
+                                    <div class="rules_txt" tabindex="0">
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                        개인정보 수집 및 이용안내 <br />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="chk">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="chkAgree" id="" /><i></i>
+                                            <span class="lbl">개인정보 취급위탁</span>
+                                        </label>
+                                        <a href="#" class="t_link_arr">내용보기</a>
+                                    </div>
+                                    <div class="rules_txt" tabindex="0">
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                        개인정보 취급위탁 <br />
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4>마켓팅 활용동의(선택)</h4>
+                            <p class="all_chk">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="marketingAllAgree" id="" /><i></i>
+                                    <strong class="lbl">전체동의</strong>
+                                </label>
+                            </p>
+                            <p class="fz_dw">마케팅/홍보를 위해 아래 항목의 정보를 이용하는데 동의하십니까?<br />동의 거부시 할인 및 이벤트 정보안내 서비스가 제한됩니다.</p>
+                            <br />
+                            <div class="inp_wid wid2">
+                                <label class="checkbox col">
+                                    <input type="checkbox" name="marketingAgree" id="" /><i></i>
+                                    <span class="lbl">이메일</span>
+                                </label>
+                                <label class="checkbox col">
+                                    <input type="checkbox" name="marketingAgree" id="" /><i></i>
+                                    <span class="lbl">문자메시지</span>
+                                </label>
+                                <label class="checkbox col">
+                                    <input type="checkbox" name="marketingAgree" id="" /><i></i>
+                                    <span class="lbl">주소</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <h4>기본정보입력</h4>
+                            <div class="form_list">
+                                <ul>
+                                    <li>
+                                        <div class="inp_wid"><input type="text" class="input col" placeholder="이름 입력 한글 2~10자" title="이름 입력" /></div>
+                                    </li>
+                                    <li>
+                                        <div class="inp_btn">
+                                            <div class="inp_wid"><input type="text" class="input col" placeholder="아이디 입력 영문,숫자 4~20자" title="아이디 입력" /></div>
+                                            <button class="button btn_gray">중복체크</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inp_wid"><input type="password" class="input col" placeholder="비밀번호 입력 영문,숫자 8~20자" title="비밀번호 입력" /></div>
+                                    </li>
+                                    <li>
+                                        <div class="inp_wid"><input type="password" class="input col" placeholder="비밀번호 재입력" title="비밀번호 재입력" /></div>
+                                    </li>
+                                    <li>
+                                        <div class="inp_btn">
+                                            <div class="inp_wid wid3">
+                                                <select name="" id="" class="select col" title="휴대폰 앞자리">
+                                                    <option value="010">010</option>
+                                                </select>
+                                                <input type="text" class="input col" title="휴대폰 중간자리" />
+                                                <input type="text" class="input col" title="휴대폰 뒷자리" />
+                                            </div>
+                                            <button class="button btn_gray">인증번호 발송</button>
+                                        </div>
+                                        <div class="inp_btn">
+                                            <input type="text" class="input" placeholder="인증번호 입력" title="인증번호 입력" />
+                                            <button class="button btn_gray">인증번호 확인</button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inp_wid wid3">
+                                            <select name="" id="" class="select col" title="생일 년도">
+                                                <option value="">년</option>
+                                            </select>
+                                            <select name="" id="" class="select col" title="생일 월">
+                                                <option value="">월</option>
+                                            </select>
+                                            <select name="" id="" class="select col" title="생일 일">
+                                                <option value="">일</option>
+                                            </select>
+                                        </div>
+                                        <div class="inp_wid wid2">
+                                            <label class="radio col">
+                                                <input type="radio" name="rdoBirth" id="" /><i></i>
+                                                <span class="lbl">양력</span>
+                                            </label>
+                                            <label class="radio col">
+                                                <input type="radio" name="rdoBirth" id="" /><i></i>
+                                                <span class="lbl">음력</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="inp_mail">
+                                            <input type="text" class="input" title="이메일 앞자리" />
+                                            <span>@</span>
+                                            <input type="text" class="input readonly" title="이메일 뒷자리" readonly="readonly" />
+                                            <select name="" id="" class="select" title="메일선택">
+                                                <option value="">선택</option>
+                                                <option value="">직접입력</option>
+                                            </select>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="button_wrap">
+                                <a href="#" class="button btn_red h50">회원가입</a>
+                            </div>
+                            <p class="t_red fz_dw">※ 14세 미만은 회원가입이 제한됩니다.</p>
+                            <p class="t_red fz_dw">※ 선택 약관에 동의하지 않으셔도 가입하실 수 있습니다.</p>
+                        </div>
+					</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+<script>
+    $(function(){
+        $('.agree_list .t_link_arr').click(function(e){
+            e.preventDefault();
+            $(this).closest('li').toggleClass('on').siblings().removeClass('on');
+        })
+    })
+</script>
+</body>
+</html>

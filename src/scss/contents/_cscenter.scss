@@ -1,0 +1,225 @@
+@charset 'utf-8';
+
+.list_view .cont .qna_answer{
+	position: relative;padding-left: 1.5em;
+	&:before{
+		content: '';display: block;position: absolute;left: 0;top: 0;width: 0.7em;height: 0.7em;border: 2px solid $color-gray2;border-width: 0 0 2px 2px;
+	}
+	&:after{
+		@include clearFix;
+	}
+	> .info{
+		margin-bottom: 1em;
+		.ic_txt{vertical-align: top;}
+		> div{
+			float: right;
+			strong, span{display:inline-block;padding:0 0.5em;}
+		}
+	}
+}
+
+.store_list_wrap {
+	margin-top:1.5em;padding: 2em 0;border-top: 1px solid #aaa;border-bottom: 1px solid #ddd;
+    &:after{
+        @include clearFix;
+    }
+    >div{
+        width: 47.5%;
+        @include respond-to('ly-l') {
+            float:none;
+            width: auto;
+            &+div {
+                margin-top: 3em;
+            }
+        }
+	}
+	.store_search{
+		margin-bottom: 1em;
+		&:after{
+			@include clearFix;
+		}
+		> div{
+			float: left;width: 48%;box-sizing:border-box;
+			@include respond-to('ly-l') {
+				float: none;width: auto;
+			}
+			+ div{margin-left: 4%;
+				@include respond-to('ly-l') {
+					margin-left: 0;margin-top: 1em;
+				}
+			}
+			
+		}
+		.inp_btn{
+			padding-right: 4.5em;
+			>.button{width: 4em;}
+		}
+		> .button{float: left;margin-left: 1%;}
+	}
+    .store_list {
+        border-top:1px solid #dddddd;border-bottom:1px solid #dddddd;font-size: 0.875em;overflow:auto;height:460px;
+        @include respond-to('ly-m') {
+            height:265px;
+        }
+        > li{
+			position: relative;padding: 1em 0.625em;
+			+ li{border-top:1px solid #dddddd;}
+			&:after{
+				@include clearFix;
+			}
+			> a{display: block;
+				> strong {
+					float: left;display: block;color:$color-black;width: 6em;
+					@include respond-to('ly-m') {
+						float: none;width: auto;
+					}
+				}
+				@include respond-to('ly-m') {
+					margin-right:8.5em;
+				}
+			}
+            .info {
+                margin-left: 6.5em;margin-right: 10em;min-height:63px;
+                @include respond-to('ly-m') {
+                   margin-left: 0;min-height:43px;margin-right: 0;
+                }
+				.tel{padding: 0.15em 0;display: flex;justify-content: space-between;margin-bottom: 0.75em;
+					@include respond-to('ly-m') {
+						margin: 0.75em 0 0;
+					}
+				}
+			}
+			.opt{position: absolute;right: 0.625em;top: 1em;width: 9em;
+				@include respond-to('ly-m') {
+					width: 8em;
+				}
+				.icon{text-align: center;padding-bottom:0.5em;
+					i{display: inline-block;vertical-align: top;margin: 1px 2px;
+						&.ic_store{@include getSprite($cscenter-ic_store);
+							&.on{@include getSprite($cscenter-ic_store_on);}
+						}
+						&.ic_delivery{@include getSprite($cscenter-ic_delivery);
+							&.on{@include getSprite($cscenter-ic_delivery_on);}
+						}
+						&.ic_park{@include getSprite($cscenter-ic_park);
+							&.on{@include getSprite($cscenter-ic_park_on);}
+						}
+						&.ic_eat{@include getSprite($cscenter-ic_eat);
+							&.on{@include getSprite($cscenter-ic_eat_on);}
+						}
+						@include respond-to('ly-m') {
+							&.ic_store{@include getSpriteRetina($cscenter-ic_store_m);
+								&.on{@include getSpriteRetina($cscenter-ic_store_m_on);}
+							}
+							&.ic_delivery{@include getSpriteRetina($cscenter-ic_delivery_m);
+								&.on{@include getSpriteRetina($cscenter-ic_delivery_m_on);}
+							}
+							&.ic_park{@include getSpriteRetina($cscenter-ic_park_m);
+								&.on{@include getSpriteRetina($cscenter-ic_park_m_on);}
+							}
+							&.ic_eat{@include getSpriteRetina($cscenter-ic_eat_m);
+								&.on{@include getSpriteRetina($cscenter-ic_eat_m_on);}
+							}
+						}
+					}
+				}
+				.button{
+					@include btnWidth(100%);
+				}
+			}
+			> label{
+				display: block;
+				.lbl{
+					padding: 0 1em;
+					&:after{
+						@include clearFix;
+					}
+					> span{
+						display: block;
+						&:first-child{
+							float: left;width: 8em;
+						}
+						+ span{
+							margin-left: 8em;
+						}
+					}
+				}
+			}
+        }
+    }
+    .map {
+        width: 100%;
+        height:518px;
+        background: #ccc;;
+        @include respond-to('ly-m') {
+            height:200px;
+        }
+	}
+	
+	&.pickup_store{
+		.store_search{
+			position: relative;
+			@include respond-to('ly-l') {
+				padding-right: 70px;
+				> .button{
+					position: absolute;margin-left: 0;right: 0;top: 0;
+					@include btnWidth(65px);
+				}
+			}
+		}
+		.store_list {
+			height:220px;
+			@include respond-to('ly-m') {
+				height:auto;
+			}
+		}
+		.map {
+			height:280px;
+			@include respond-to('ly-m') {
+				height:200px;
+			}
+		}
+	}
+}
+
+.contact_list{
+	margin: 5em -20px 0;text-align: center;
+	@include respond-to('ly-m') {
+		margin: 2em 0 0;
+	}
+	> li{
+		float: left;width: 33.33%;padding: 0 20px;box-sizing: border-box;
+		@include respond-to('ly-m') {
+            float: none;display: inline-block; padding:3px;width: 49%;vertical-align: top;
+        }
+		> a{
+			display: block;text-align: center;background: #eeeeee;padding: 1.5em 0.5em;
+			@include respond-to('ly-m') {
+				font-size: 0.875em;
+				img{width: 27px;}
+			}
+			> div{
+				display: inline-block;vertical-align: middle;margin-left: 0.75em;text-align: left;				
+				strong{color: $color-black;}
+				span{font-size:0.75em;margin-left: 0.5em;
+					@include respond-to('ly-m') {
+						margin-left: 0;
+					}
+				}
+				.tel{display: block;font-size:1.25em;}
+			}
+		}
+	}
+}
+
+.faq_tbl{ 
+	.faq_answer{
+		display: none;
+		&.on{display: table-row;}
+		td{background: #eeeeee;}
+	}
+	.faq_answer_txt{position: relative;padding: 0.35em 4em 0.35em 1em;}
+	.btn_faq_close{position: absolute;right: 0;top: 0;
+		@include btnWidth(3.5em);
+	}
+}

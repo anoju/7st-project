@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">휴면계정 관리</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>휴면계정 관리</strong></li>
+                    </ul>
+                </div>
+                <div class="member_box">
+                    <div class="tbl">
+                        <div class="col dormant">
+                            <h4>개인정보 유효기간제 시행에 따른 휴면계정 관리 안내</h4>
+                            <ul class="txt_list">
+                                <li>정보통신망 이용촉진 및 정보보호 등에 관한 제 29조 2창 (2015년 8월 18일 시행)에 위거하여, 1년 이상 7번가피자 서비스를 이용하지 않은 고객의 개인정보는 휴면계정으로 관리됩니다.</li>
+                                <li>기존 ID및 정보는 본인인증 확인 후 해제 및 재사용이 가능합니다. (휴면계정 미 해제 시, 주문 및 서비스 이용 불가)</li>
+                            </ul>
+                            <h4>휴면계정 해제하기</h4>
+                            <div class="btn">
+                                <ul>
+                                    <li><a href="#popUserCheck" class="pop_open"><i class="user"></i>회원정보인증</a></li>
+                                    <li><a href="#"><i class="phone"></i>휴대전화 본인인증</a></li>
+                                </ul>
+                            </div>
+                            <p class="fz_dw t_red">신용평가기관을 통해 7번가피자에 가입하신 아이디, 비밀번호 찾기를 진행하며, 당사는 고객의 주민등록번호를 저장하지 않습니다. </p>
+                        </div>
+					</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+
+<!-- popup -->
+@@include('../popup/popUserCheck.html')
+<!-- //popup -->
+</body>
+</html>

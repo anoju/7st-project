@@ -1,0 +1,97 @@
+@charset 'utf-8';
+.evt_list{
+    margin: 0 -30px;
+    @include respond-to('ly-l') {
+        margin: 0 -15px;
+    }
+    @include respond-to('ly-m') {
+        margin: 0;
+    }
+    img{width: 100%;}
+    >li{
+        float: left;width: 50%;padding:0 30px 40px;box-sizing: border-box;
+        @include respond-to('ly-l') {
+            padding:0 15px 30px;
+        }
+        @include respond-to('ly-m') {
+            float: none;width: auto;padding:0 0 25px;
+        }
+        > a{
+            display: block;
+		}
+		&:nth-child(odd){
+			clear: both;
+		}
+	}
+	.img{
+		position: relative;display: block;
+		&.end{
+			&:before{
+				content: '';display: block;position: absolute;left: 0;top: 0;right: 0;bottom: 0;background:rgba(0,0,0,0.5);
+			}
+		}
+	}
+    .info{
+		position: relative;display: block;margin-top:1em;padding-right: 6em;		
+		@include respond-to('ly-m') {
+            padding-right: 0;
+        }
+        > strong{
+		   display: block; color: $color-black;margin-bottom: 0.3em;
+		   @include respond-to('ly-m') {
+				padding:0.5em 6em 0.5em 0;
+			}
+        }
+        > span{
+			display: block;font-size: 0.875em;
+		}
+		.ic_txt{position: absolute;right:0;top: 0;width:3.3em;}
+    }
+}
+
+.list_view.evt_view{ 
+	.tit{
+		position: relative;padding-right: 7em;
+		.ic_txt{position: absolute;top: 50%;right: 1em;width: 3.3em;transform: translateY(-50%);}
+	}
+}
+
+.membership_info{
+	img{max-width: 100%;}
+	> ul{
+		margin: 0 -30px;
+		@include respond-to('ly-l') {
+			margin: 0 -15px;
+		}
+		@include respond-to('ly-m') {
+			margin: 0;
+		}
+		> li{float: left;width: 50%;box-sizing: border-box;padding: 0 30px 40px;
+			@include respond-to('ly-l') {
+				padding:0 15px 30px;
+			}
+			@include respond-to('ly-m') {
+				float: none;width: auto;padding:0 0 25px;
+			}
+			&:nth-child(odd){
+				clear: both;
+			}
+			.tbl{
+				display: table;width: 100%;border: 1px solid #ddd;
+				> div{display: table-cell;vertical-align: middle;padding: 2.5em 1em;
+					@include respond-to('ly-m') {
+						padding: 1.5em 1em;
+					}
+					strong{display: block;color: $color-black;font-size: 1.5em;margin-bottom: 0.3em;}
+				}
+				.img{width: 35%;text-align: center;
+					@include respond-to('ly-m') {
+						width: 90px;
+					}
+					+ div{padding-left: 0;}
+				}
+			}
+		}
+	}
+	+.button_wrap{margin-top: 1em;}
+}

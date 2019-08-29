@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+@@include('./include/head.html',{"path":".."})
+</head>
+<body>
+@@include('./include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('./include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">팝업확인</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>팝업확인</strong></li>
+                    </ul>
+				</div>
+                <div class="guide">
+                    <h3>팝업호출방법</h3>
+                    <h4>클래스로 이용하는법</h4>
+                    <textarea class="textarea readonly" style="height:200px" readonly>팝업열때
+<a href="#팝업ID" class="button pop_open">버튼</a>
+a태그 클래스에 pop_open 붙이고 href에 팝업 id를 넣으면 팝업호출
+
+팝업닫을때
+<a href="#" class="button btn_gray pop_close">닫기</a>
+열려있는 팝업 안에 어떤 요소든 pop_close 클래스를 붙이고 클릭하면 해당 팝업은 닫힌다</textarea>
+
+                    <h4>함수로로 이용하는법</h4>
+                    <textarea class="textarea readonly" style="height:200px" readonly>팝업열때
+popOpen('#팝업ID', 닫힌 후 포커스가 갈 버튼);
+ex) 버튼 클릭으로 함수 실행 시 popOpen('#popAlert', this);
+클릭이 아닌 그냥 함수만 실행할때 popOpen('#popAlert'); 이렇게 사용가능
+
+팝업닫을때
+popClose('#팝업ID'); //해당 팝업 닫힘
+ex) popClose('#popAlert');</textarea>
+
+                    <h4>팝업 bg 클릭시 안닫히게 하는법</h4>
+                    <textarea class="textarea readonly" readonly>해당 팝업에 close_none 클래스 부여
+ex) <div id="popAlert" class="pop_bg close_none">...</div></textarea>
+                    <h4>로딩 창</h4>
+                    <textarea class="textarea readonly" readonly>띄우는 함수 : loadingShow();
+닫는 함수 : loadingHide();</textarea>
+                    <p class="mt10">
+                        <button class="button" onclick="loadingShow();">로딩창 띄우기</button>
+                        <button class="button" onclick="loadingHide();" style="z-index:100000;">로딩창 닫기</button>
+                    </p>
+                    <h4>alertTip <span>(확인 버튼 클릭)</span></h4>
+                    <textarea class="textarea readonly" style="height:120px" readonly>폼 관련된 태그 간단한 alert 메세지 용도(focus까지 처리)
+input, select, textarea 위주로 사용
+함수 : alertTip('타겟ID','삽입내용');
+ex)alertTip('#userId','아이디를 확인해주세요')</textarea>
+                    <div class="mt10">
+                        <input class="input" id="userId" type="text" placeholder="아이디를 입력하세요" title="아이디 입력">
+                        <a href="javascript:vold(0)" class="button btn_gray" onclick="alertTip('#userId','아이디를 확인해주세요')">확인</a>
+                    </div>
+                </div>
+                <hr />
+                <h3 class="t_red">코딩 된 팝업확인</h3>
+                <p class="mt10"><a href="#popAlert" class="button pop_open">7번가피자 얼럿 팝업</a></p>
+                <p class="mt10"><a href="#popConfirm" class="button pop_open">7번가피자 컨펌 팝업</a></p>
+                <br />
+                <p class="mt10"><a href="#popAllergy" class="button pop_open">알레르기 팝업</a></p>
+                <p class="mt10"><a href="#popNutrition" class="button pop_open">영양정보 팝업</a></p>
+                <p class="mt10"><a href="#popOrigin" class="button pop_open">원산지 팝업</a></p>
+                <br />
+                <p class="mt10"><a href="#popCouponRegist" class="button pop_open">쿠폰등록 팝업</a></p>
+                <p class="mt10"><a href="#popGiftconRegist" class="button pop_open">기프티콘등록 팝업</a></p>
+                <p class="mt10"><a href="#popCouponStore" class="button pop_open">이용매장안내 팝업</a></p>
+                <p class="mt10"><a href="#popFirstBuyCoupon" class="button pop_open">첫구매 쿠폰발행 팝업</a></p>
+                <p class="mt10"><a href="#popMyCoupon" class="button pop_open">내쿠폰함 팝업</a></p>
+                <p class="mt10"><a href="#popOrderReceipt" class="button pop_open">구매 영수증 팝업</a></p>
+                <p class="mt10"><a href="#popOrderView" class="button pop_open">주문내역상세 팝업</a></p>
+                <p class="mt10"><a href="#popUserCheck" class="button pop_open">회원정보 인증(휴면해제) 팝업</a></p>
+                <br />
+                <p class="mt10"><a href="#popAddress" class="button pop_open">주소찾기 팝업</a></p>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('./include/footer.html')
+</div>
+<!-- //wrap -->
+
+<!-- popup -->
+@@include('./popup/popAlert.html')
+@@include('./popup/popConfirm.html')
+@@include('./popup/popAllergy.html')
+@@include('./popup/popNutrition.html')
+@@include('./popup/popOrigin.html')
+@@include('./popup/popCouponRegist.html')
+@@include('./popup/popCouponStore.html')
+@@include('./popup/popFirstBuyCoupon.html')
+@@include('./popup/popMyCoupon.html')
+@@include('./popup/popGiftconRegist.html')
+@@include('./popup/popOrderReceipt.html')
+@@include('./popup/popOrderView.html')
+@@include('./popup/popUserCheck.html')
+@@include('./popup/popAddress.html')
+</body>
+</html>

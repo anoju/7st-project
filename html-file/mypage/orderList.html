@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">마이페이지</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>마이페이지</strong></li>
+                    </ul>
+                </div>
+                <ul class="tabmenu">
+                    <li class="on"><a href="#">주문내역</a></li>
+                    <li><a href="#">1:1 문의</a></li>
+                    <li><a href="#">개인정보수정</a></li>
+                    <li><a href="#">쿠폰관리</a></li>
+                </ul>
+                <div class="cont_in">
+                    <p>주문내역 변경 및 취소는 고객센터(1688-7887)로 문의주시기 바랍니다. (온라인으로 처리 불가)</p>
+                    <div class="tbl_search mt15">
+                        <input class="input datepicker" type="text" placeholder="기간선택" title="날짜입력" />
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <input class="input datepicker" type="text" placeholder="기간선택" title="날짜입력" />
+                        <button class="button btn_red">검색</button>
+                    </div>
+                    <div class="tbl_wrap">
+                        <table class="table">
+                            <caption>비회원 주문정보</caption>
+                            <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">주문일자</th>
+                                    <th scope="col">주문번호</th>
+                                    <th scope="col">최종결제금액</th>
+                                    <th scope="col">주문매장</th>
+                                    <th scope="col">주문상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2018-08-20</td>
+                                    <td><a class="t_link red pop_open" href="#popOrderView">123456789</a></td>
+                                    <td><strong>17,900원</strong></td>
+                                    <td>순천신대점</td>
+                                    <td>주문접수</td>
+                                </tr>
+                                <tr>
+                                    <td>2018-08-20</td>
+                                    <td><a class="t_link red" href="#">123456789</a></td>
+                                    <td><strong>17,900원</strong></td>
+                                    <td>순천신대점</td>
+                                    <td>조리중</td>
+                                </tr>
+                                <tr>
+                                    <td>2018-08-20</td>
+                                    <td><a class="t_link red" href="#">123456789</a></td>
+                                    <td><strong>17,900원</strong></td>
+                                    <td>순천신대점</td>
+                                    <td>배달중</td>
+                                </tr>
+                                <tr>
+                                    <td>2018-08-20</td>
+                                    <td><a class="t_link red" href="#">123456789</a></td>
+                                    <td><strong>17,900원</strong></td>
+                                    <td>순천신대점</td>
+                                    <td>배달완료</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="paging">
+                        <a href="#" class="btn btn_prev"><span>이전 페이지로</span></a>
+                        <span>
+                            <a href="#">1</a>
+                            <strong>2</strong>
+                            <a href="#">3</a>
+                        </span>
+                        <a href="#" class="btn btn_next"><span>다음 페이지로</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+
+<!-- popup -->
+@@include('../popup/popOrderView.html')
+@@include('../popup/popOrderReceipt.html')
+<!-- //popup -->
+</body>
+</html>

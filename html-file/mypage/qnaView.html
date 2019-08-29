@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">마이페이지</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>마이페이지</strong></li>
+                    </ul>
+                </div>
+                <ul class="tabmenu">
+                    <li><a href="#">주문내역</a></li>
+                    <li class="on"><a href="#">1:1 문의</a></li>
+                    <li><a href="#">개인정보수정</a></li>
+                    <li><a href="#">쿠폰관리</a></li>
+                </ul>
+                <div class="cont_in">
+                    <ul class="list_view">
+                        <li class="tit">
+                            <h4>[기타]  조각을 12개로 할 수 있나요?</h4>
+                            <div class="right">
+                                <span class="date">2018.01.03</span>
+                            </div>
+                        </li>
+                        <li class="cont">
+                            문의내용 <br />문의내용 <br />문의내용 <br />문의내용 <br />문의내용
+                        </li>
+                        <li class="cont">
+                            <div class="qna_answer">
+                                <div class="info">
+                                    <span class="ic_txt">확인중</span>
+                                </div>
+                                고객님의 문의 내용을 확인 중입니다. <br />
+                                신속한 답변을 원하시면, 고객센터로 문의 부탁드립니다.<br />
+                                7번가피자 고객센터 : 1688-7887
+                            </div>
+                        </li>
+                        <li class="cont">
+                            <div class="qna_answer">
+                                <div class="info">
+                                    <span class="ic_txt ic_red2">답변완료</span> 
+                                    <div>
+                                        <strong class="t_black">7번가피자</strong>
+                                        <span class="date">2018-12-24 18:30</span>
+                                    </div>
+                                </div>
+                                안녕하세요. abc12345님!<br />
+                                피자 조각수는 너무 작게 또는 너무 크게가 아니라면, 고객님이 원하시는 수로 잘라드릴 수 있으며 주문시, 요청사항에 기재해주세요. <br />
+                                항상 7번가피자를 이용해주셔서 감사합니다.
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="button_wrap">
+                        <a href="#" class="button h50 btn_black">목록</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+</body>
+</html>

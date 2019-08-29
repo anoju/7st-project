@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">아이디/비밀번호 찾기</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>아이디/비밀번호 찾기</strong></li>
+                    </ul>
+                </div>
+                <ul class="tabmenu">
+                    <li><a href="#">아이디찾기</a></li>
+                    <li class="on"><a href="#">비밀번호찾기</a></li>
+                </ul>
+                <div class="pw_change">
+                    <h4>비밀번호 변경</h4>
+                    <p>본인확인이 완료되었습니다. 새로운 비밀번호를 등록해 주세요.</p>
+                    <ul>
+                        <li>
+                            <strong>아이디</strong>
+                            <div class="inp_wid"><input type="text" class="input col readonly" readonly="readonly" value="abc1234" title="아이디" /></div>
+                        </li>
+                        <li>
+                            <strong>새 비밀번호</strong>
+                            <div class="inp_wid"><input type="password" class="input col" placeholder="영문, 숫자 조합 8~20자" title="새 비밀번호 입력" /></div>
+                        </li>
+                        <li>
+                            <strong>새 비밀번호 확인</strong>
+                            <div class="inp_wid"><input type="password" class="input col" placeholder="새 비밀번호 재입력" title="새 비밀번호 재입력" /></div>
+                        </li>
+                        <li>
+                            <div class="inp_wid"><button class="button btn_gray col">비밀번호 변경</button></div>
+                        </li>
+                    </ul>
+
+                    <div>
+                        <p class="t_red">※ 비밀번호가 타인에게 유출되지 않도록 주의해 주세요.</p>
+                        <p class="t_red">※ 개인정보 보호를 위하여, 정기적으로 비밀번호를 변경하시는 것이 좋습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+</body>
+</html>

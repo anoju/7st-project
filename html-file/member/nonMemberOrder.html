@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">로그인</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>로그인</strong></li>
+                    </ul>
+                </div>
+                <ul class="tabmenu">
+                    <li><a href="#">회원</a></li>
+                    <li><a href="#">비회원</a></li>
+                    <li class="on"><a href="#">비회원 주문조회</a></li>
+                </ul>
+                <div class="cont_in">
+                    <div class="serch_box">
+                        <span>
+                            <input type="text" class="input" placeholder="주분번호 입력" title="주분번호 입력" />
+                        </span>
+                        <span>
+                            <span class="inp_wid wid3">
+                                <select name="" id="" class="select col" title="연락처 첫자리 선택">
+                                    <option value="">010</option>
+                                </select>
+                                <input type="text" class="input col" title="연락처 중간자리 입력" />
+                                <input type="text" class="input col" title="연락처 마지막자리 입력" />
+                            </span>
+                            <button class="button btn_red">주문조회</button>
+                        </span>
+                        <p>주문정보를 모르는 경우, <strong>고객센터 1688-7887</strong>로 문의주세요.</p>
+                    </div>
+                    <p>주문내역 변경 및 취소는 고객센터(1688-7887)로 문의주시기 바랍니다. (온라인으로 처리 불가)</p>
+                    <div class="tbl_wrap mt15">
+                        <table class="table">
+                            <caption>비회원 주문정보</caption>
+                            <colgroup>
+                                <col />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">주문일자</th>
+                                    <th scope="col">주문번호</th>
+                                    <th scope="col">최종결제금액</th>
+                                    <th scope="col">주문매장</th>
+                                    <th scope="col">주문상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2018-08-20</td>
+                                    <td><a class="t_link red pop_open" href="#popOrderView">123456789</a></td>
+                                    <td><strong>17,900원</strong></td>
+                                    <td>순천신대점</td>
+                                    <td>주문접수</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br />
+                    <br />
+                    <ul class="txt_list">
+                        <li>매장 또는 콜센터로 주문하신 내역은 온라인 주문내역에 표시되지 않습니다.</li>
+                        <li>온라인 상으로 주문한 최초의 내용만 확인하실 수 있으며, 전화를 통해 변경하신 사항은 반영되지 않습니다.</li>
+                        <li>결제방법을 수정하실 경우에는 해당 매장으로 직접 연락하셔야 하며, 배달 중에는 변경 불가합니다.</li>
+                        <li>주문번호를 클릭하시면 상세정보(주문번호/배달장소/주문내역 등)를 확인하실 수 있습니다.</li>
+                        <li>주문상세 페이지의 ‘영수증 출력’을 클릭하시면, 해당 주문의 영수증을 출력할 수 있습니다.</li>
+                        <li>주문이력은 최대 1년까지 확인 가능합니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+
+<!-- popup -->
+@@include('../popup/popUserCheck.html')
+@@include('../popup/popOrderReceipt.html')
+<!-- //popup -->
+</body>
+</html>

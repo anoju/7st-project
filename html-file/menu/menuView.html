@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">피자</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">메뉴</a></li>
+                        <li><strong>피자</strong></li>
+                    </ul>
+                </div>
+                <div class="menu_view">
+                    <div class="img">
+                        <div>
+                            <img src="../../dist/images/menu/@menu_view.png" alt="체다골드 포테이토피자 R" />
+                            <b class="ic_menu new">NEW</b>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="name">
+                            <h4>체다골드 포테이토피자 R</h4>
+                            <div class="sns_share">
+                                <a href="#" class="facebook">페이스북 공유</a>
+                                <a href="#" class="kakao">카카오 공유</a>
+                                <a href="#" class="url">URL 복사</a>
+                            </div>
+                        </div>
+                        <div class="txt">온가족이 즐기는 남다른 반반 피자!</div>
+                        <ul class="opt">
+                            <li>
+                                <strong>엣지선택</strong>
+                                <div>
+                                    <div class="edge_list">
+                                        <label class="edge_rdo">
+                                            <input type="radio" name="edgeRdo" />
+                                            <span class="lbl">
+                                                <span class="edge_img"><img src="../../dist/images/menu/edge/edge_default.png" alt=""></span>
+                                                <span class="edge_txt">석쇠</span>
+                                            </span>
+                                        </label>
+                                        <label class="edge_rdo">
+                                            <input type="radio" name="edgeRdo" />
+                                            <span class="lbl">
+                                                <span class="edge_img"><img src="../../dist/images/menu/edge/edge_ricottaRing.png" alt=""></span>
+                                                <span class="edge_txt">리코타링 크러스트 (+2,000원)</span>
+                                            </span>
+                                        </label>
+                                        <label class="edge_rdo">
+                                            <input type="radio" name="edgeRdo" />
+                                            <span class="lbl">
+                                                <span class="edge_img"><img src="../../dist/images/menu/edge/edge_cheeseRing.png" alt=""></span>
+                                                <span class="edge_txt">치즈링 크러스트 (+3,000원)</span>
+                                            </span>
+                                        </label>
+                                        <label class="edge_rdo">
+                                            <input type="radio" name="edgeRdo" />
+                                            <span class="lbl">
+                                                <span class="edge_img"><img src="../../dist/images/menu/edge/edge_goldSweet.png" alt=""></span>
+                                                <span class="edge_txt">골드스위 크러스트 (+3,000원)</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>토핑추가</strong>                                    
+                                <div>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="" /><i></i>
+                                        <span class="lbl">치즈토핑(+1000원)</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>수량</strong>
+                                <div>
+                                    <span class="inp_spinner" data-min="1" data-max="5">		
+                                        <span>
+                                            <input class="input" type="text" value="1" readonly="readonly">
+                                        </span>
+                                        <a href="#" class="btn btn_minus"><span class="blind">빼기</span></a>
+                                        <a href="#" class="btn btn_plus"><span class="blind">더하기</span></a>					
+                                    </span>
+                                    <span class="inblock">최대 5개까지 선택할 수 있습니다.</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="total">
+                            <div class="t_price"><strong>28,500</strong>원</div>
+                            <div class="inp_wid">
+                                <a href="#" class="button h50 btn_red col">담기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu_detail"><img src="../../dist/images/menu/@menu_detail.png" alt=""></div>
+
+                <h4 class="cont_tit">주요토핑</h4>
+                <div class="topping_img">
+                    <img src="../../dist/images/menu/@topping.png" alt="토핑리스트">
+                </div>
+                
+                @@include('./inc/popupBtn.html')
+
+                <h4 class="cont_tit">영양정보</h4>
+                <div class="tbl_wrap">
+                    <table class="table type2 small">
+                        <caption>제품 영양정보</caption>
+                        <colgroup>
+                            <col style="width:12%" />
+                            <col style="width:10%" />
+                            <col style="width:10%" />
+                            <col style="width:10%" />
+                            <col style="width:10%" />
+                            <col style="width:10%" />
+                            <col style="width:10%" />
+                            <col style="width:10%" />
+                            <col style="width:10%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">엣지</th>
+                                <th scope="col">1회 중량 (g)</th>
+                                <th scope="col">1회 조각수</th>
+                                <th scope="col">총 중량 (g)</th>
+                                <th scope="col">열량 (kcal/1회)</th>
+                                <th scope="col">단백질 (g/1회)</th>
+                                <th scope="col">포화지방 (g/1회)</th>
+                                <th scope="col">나트륨 (mg/1회)</th>
+                                <th scope="col">당류 (g/1회)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>석쇠</td>
+                                <td>168</td>
+                                <td>2</td>
+                                <td>670</td>
+                                <td>417</td>
+                                <td>25</td>
+                                <td>8</td>
+                                <td>460</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>치즈링</td>
+                                <td>168</td>
+                                <td>2</td>
+                                <td>670</td>
+                                <td>417</td>
+                                <td>25</td>
+                                <td>8</td>
+                                <td>460</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>리코타링</td>
+                                <td>168</td>
+                                <td>2</td>
+                                <td>670</td>
+                                <td>417</td>
+                                <td>25</td>
+                                <td>8</td>
+                                <td>460</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>골드스윗</td>
+                                <td>168</td>
+                                <td>2</td>
+                                <td>670</td>
+                                <td>417</td>
+                                <td>25</td>
+                                <td>8</td>
+                                <td>460</td>
+                                <td>11</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+
+<!-- popup -->
+@@include('../popup/popOrigin.html')
+@@include('../popup/popAllergy.html')
+@@include('../popup/popNutrition.html')
+<!-- //popup -->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">회원가입</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>회원가입</strong></li>
+                    </ul>
+                </div>
+                <div class="join_flow_wrap">
+                    <ol class="join_flow">
+                        <li>STEP 1 <span>회원선택</span></li>
+                        <li class="on">STEP 2 <span>본인확인</span></li>
+                        <li>STEP 3 <span>정보입력</span></li>
+                        <li>STEP 4 <span>가입완료</span></li>
+                    </ol>
+                </div>
+
+                <div class="member_box step2">
+					<div class="txt">
+						<h4>회원가입을 위해 본인인증을 해주세요</h4>
+						<p>휴대폰 또는 아이핀 인증으로 본인 확인을 하실 수 있습니다.</p>
+					</div>
+                    <div class="tbl">
+                        <div class="col">
+							<a href="#" class="btn_check"><i class="phone"></i><strong>휴대폰인증</strong></a>
+							<p>본인 명의의 휴대폰 번호로 인증 합니다.</p>
+							<p>타인 명의 휴대폰, 법인폰을 이용자는 휴대폰 본인인증이 불가합니다.</p>
+                        </div>
+					</div>
+					<div class="txt">
+						<ul class="txt_list">
+							<li>7번가피자는 안전한 서비스를 위하여 본인여부를 확인하고 있습니다.</li>
+							<li>본인 인증시 제공되는 정보는 인증 이외의 용도로 이용 또는 저장하지 않습니다.</li>
+							<li>아이핀ID가 없는 경우, <a href="#" class="t_link" target="_blank" title="새창열림">한국 신용정보(주)</a> 에서 바로 발급받아 사용할 수 있습니다.</li>
+						</ul>
+					</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+</body>
+</html>

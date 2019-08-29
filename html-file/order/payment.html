@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<section id="contents">
+			<div class="inner">
+				<div class="page_top">
+					<a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+					<h3 id="pageTit">결제하기</h3>
+					<ul id="location">
+						<li><a href="/">Home</a></li>
+						<li><strong>결제하기</strong></li>
+					</ul>
+				</div>
+				<div class="order_store">
+					<strong>방문포장</strong>
+					<strong>성수2호점</strong>
+					<button class="button btn_gray">변경</button>
+                </div>
+                <div class="payment_wrap">
+                    <div class="left">
+                        <h4 class="cont_tit">수령인 정보</h4>
+                        <div class="box">
+                            <ul>
+                                <li><strong>이름</strong>
+                                    <div class="inp_wid wid2">
+                                        <input type="text" class="input col" />
+                                        <label class="checkbox col">
+                                            <input type="checkbox" /><i></i>
+                                            <span class="lbl">주문자와 동일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li><strong>휴대폰</strong>
+                                    <div class="inp_wid wid3">
+                                        <select name="" id="" class="select col" title="휴대폰 앞자리">
+                                            <option value="010">010</option>
+                                        </select>
+                                        <input type="text" class="input col" title="휴대폰 중간자리" />
+                                        <input type="text" class="input col" title="휴대폰 뒷자리" />
+                                    </div>
+                                </li>
+                                <li><strong>도착시간</strong>
+                                    <div class="inp_wid wid3">
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl">바로주문</span>
+                                        </label>
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl">오늘예약</span>
+                                        </label>
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl">내일예약</span>
+                                        </label>
+                                    </div>
+                                    <div class="inp_wid wid2">
+                                        <input type="text" class="input col" value="8월 20일" readonly="readonly" title="주문일" />
+                                        <select class="select col" title="예약시간 선택">
+                                            <option value="">시간 선택</option>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li><strong>요청사항</strong>
+                                    <div>
+                                        <textarea class="textarea" title="요청사항 입력"></textarea>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <h4 class="cont_tit">할인</h4>
+                        <div class="box">
+                            <div class="pay_coupon">
+                                <div class="inp_btn">
+                                    <input type="text" class="input" placeholder="쿠폰코드 입력(10자리 숫자/영문)" title="쿠폰코드 입력" />
+                                    <button class="button btn_gray">쿠폰</button>
+                                </div>
+                                <div class="inp_btn">
+                                    <input type="text" class="input" placeholder="기프티콘코드 입력(12자리 숫자/영문)" title="기프티콘코드 입력" />
+                                    <button class="button btn_gray">기프티콘 등록</button>
+                                </div>
+                                <div class="cp_btn">
+                                    <a href="#">
+                                        <i></i>
+                                        <span>내 쿠폰함에서<br />사용하기</span>
+                                    </a>
+                                </div>
+                                <p class="fz_dw">※ 등록하신 쿠폰, 기프티콘 내역은 마이페이지에서 확인하실 수 있습니다.</p>
+                                <div class="dc_price">할인 금액<strong>0</strong>원</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="payment_wrap">
+                    <h4 class="cont_tit">결제방법</h4>
+                    <div class="left">
+                        <div class="box">
+                            <ul>
+                                <li><strong>온라인 결제</strong>
+                                    <div class="inp_wid wid2">
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl">신용카드</span>
+                                        </label>
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl">휴대폰결제</span>
+                                        </label>
+                                    </div>
+                                    <div class="inp_wid wid2">
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl"><i class="kakao">카카오페이</i></span>
+                                        </label>
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl"><i class="naver">카카오페이</i></span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="line"><strong>현장 결제</strong>
+                                    <div class="inp_wid wid2">
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl">현금결제</span>
+                                        </label>
+                                        <label class="radio col">
+                                            <input type="radio" /><i></i>
+                                            <span class="lbl">신용카드</span>
+                                        </label>                                        
+                                    </div>
+                                    <div class="inp_wid wid2">
+                                        <label class="checkbox col">
+                                            <input type="checkbox" /><i></i>
+                                            <span class="lbl">현금영수증</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="pay_total">
+                            <p><strong class="t_black">아빠앤나 리코타링 R</strong> 외(총<span class="t_red">2</span>건)</p>
+                            <div class="total_price">
+                                <div>
+                                    <span>합계</span>
+                                    <span class="t_price"><strong>91,900</strong>원</span>
+                                </div>
+                                <div>
+                                    <span>할인</span>
+                                    <span class="t_price"><strong>1,900</strong>원</span>
+                                </div>
+                                <div class="last">
+                                    <span>최종결제금액</span>
+                                    <span class="t_price"><strong>90,000</strong>원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="checkbox">
+                                <input type="checkbox" /><i></i>
+                                <span class="lbl">이 주문을 퀵오더로 저장하기</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="button_wrap btn2">
+                    <a href="#" class="button h50 btn_black">추가하기</a>
+                    <a href="#" class="button h50 btn_red">주문진행</a>
+                </div>
+			</div>
+		</section>
+	</div>
+	<!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+
+<!-- 팝업 -->
+@@include('../popup/popMyCoupon.html')
+@@include('../popup/popCouponRegist.html')
+@@include('../popup/popGiftconRegist.html')
+<!-- //팝업 -->
+</body>
+</html>

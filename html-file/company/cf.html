@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">CF 광고</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">회사소개</a></li>
+                        <li><strong>CF 광고</strong></li>
+                    </ul>
+                </div>
+                <div class="video_list">
+                    <ul>
+                        <!-- <li>
+                            <div class="youtube"><iframe src="http://www.youtube.com/embed/7Z2Ut-nvdEY?enablejsapi=1&amp;amp;version=3&amp;amp;playerapiid=ytplayer&amp;amp;rel=0&amp;amp;autoplay=1&amp;amp;autohide=1&amp;amp;showinfo=0&amp;amp;wmode=opaque" allowfullscreen="allowfullscreen" frameborder="0" title="7번가피자 CF"></iframe></div>
+                            <div class="info">
+                                <strong>7번가피자 CF</strong>
+                                <div class="sns_share">
+                                    <a href="#" class="facebook">페이스북 공유</a>
+                                    <a href="#" class="kakao">카카오 공유</a>
+                                    <a href="#" class="url">URL 복사</a>
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+<script>
+    $(function(){
+        var youtubeList = [
+            { id:'7Z2Ut-nvdEY', title:'7번가피자 CF', share: false },
+            { id:'-VxI23SWHtE', title:'우리결혼했어요 세계판 시즌 2_7번가피자', share: true },
+            { id:'WKxVCfuA8Nc', title:'박람회에서 인기브랜드로 선정! 7번가 피자', share: true },
+            { id:'jj0JOtGRtdo', title:'7번가피자 광고 CF 전광판', share: true },
+            { id:'VZlatg3dDAs', title:'7번가피자 광고 CF 에니메이션', share: true },
+            { id:'1PxYJ7LRkXI', title:'7번가 피자 TV광고 CF와이키키', share: true },
+            { id:'A_HzQNYdBgI', title:'7번가피자 TV광고 (CF근본이다른)', share: true },
+            { id:'--2ipVWp04I', title:'7번가피자 광고 - 스펀지편', share: true }
+        ]
+
+        if(youtubeList.length > 0){
+            for(var i=0; i<youtubeList.length; i++){
+                var $id = youtubeList[i].id,
+                    $title = youtubeList[i].title,
+                    $sns = youtubeList[i].share;
+                
+                var $li = '<li>';
+                    $li += '<div class="youtube"><iframe src="http://www.youtube.com/embed/'+$id+'?enablejsapi=1&amp;amp;version=3&amp;amp;playerapiid=ytplayer&amp;amp;rel=0&amp;amp;autoplay=1&amp;amp;autohide=1&amp;amp;showinfo=0&amp;amp;wmode=opaque" allowfullscreen="allowfullscreen" frameborder="0" title="'+$title+'"></iframe></div>'
+                    $li += '<div class="info"><strong>'+$title+'</strong>'
+                    if($sns == true){
+                        $li += `<div class="sns_share">
+                                    <a href="#" class="facebook">페이스북 공유</a>
+                                    <a href="#" class="kakao">카카오 공유</a>
+                                    <a href="#" class="url">URL 복사</a>
+                                </div>`;
+                    }
+                    $li += '</div></li>';
+                
+                $('.video_list > ul').append($li);
+            }
+        }
+    })
+</script>
+</body>
+</html>

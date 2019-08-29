@@ -1,0 +1,461 @@
+@charset "UTF-8";
+
+.t_price{
+	strong{color: #222;}
+	&.red{
+		color: #ec1c24;
+		strong{color: #ec1c24;}
+	}
+}
+.order_detail{
+	font-size:0.875em;
+	.order_complate &{
+		font-size:1em;
+	}
+	&:after{
+		@include clearFix;
+	}
+	.table{
+		font-size: 1em;
+		tfoot td{
+			.t_price{
+				font-size: 1.429em;
+			}
+		}
+	}
+	.total_price{font-size: 1.143em;}
+	> .left{
+        clear: both;float: left;width: 48%;
+        @include respond-to('ly-m'){
+            float: none;width: auto;
+        }
+    }
+    > .right{
+        float: right;width: 48%;
+        @include respond-to('ly-m'){
+            float: none;width: auto;
+        }
+	}
+	h2{font-size: 1.125em;color: $color-black;margin:1.5em 0 0.75em;}
+}
+.add_opt{
+	font-size:0.875em;margin-top: 1em;
+	+  .add_opt{
+		margin-top: 0.2em;
+	}
+	> strong{
+		display: block;float: left;width: 4em;font-weight: 500;
+	}
+	> div{margin-left: 4em;
+		> span{
+			display:inline-block;margin: 0 0.3em;
+		}
+	}
+	.table &{
+		padding-left: 1em;
+	}
+}
+.total_price{
+	display: table;width: 100%;background: #f3f3f3;border: 1px solid #ccc;border-width:1px 0;
+	.table + &{border-top-width: 0;}
+	> div{
+		position: relative;display: table-cell;width: 33.33%;text-align: center;vertical-align: middle;padding:1em 0.3em;
+		> span{display: block;}
+		&.last{
+			color: #ec1c24;
+			.t_price strong{
+				color: #ec1c24;
+			}
+		}
+		+ div{
+			&:before{
+				content:'';display: block;position: absolute;left: 0;top: 50%;margin:-15px 0 0 -15px;
+				@include respond-to('ly-m'){
+					margin: -9px 0 0 -9px;
+				}
+				@include getSprite($common-ic_price_minus);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($common-ic_price_minus_m);
+				}
+			}
+			&.last:before{
+				@include getSprite($common-ic_price_equal);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($common-ic_price_equal_m);
+				}
+			}
+		}
+	}
+}
+
+.order_type{
+	overflow: hidden;
+	> ul{
+		margin: 0 -20px;
+		@include respond-to('ly-m'){
+			margin: 0 -5px;
+		}
+		> li{
+			float: left;width: 50%;padding: 0 20px;box-sizing: border-box;
+			@include respond-to('ly-m'){
+				padding: 0 5px;
+			}
+			> a{
+				position: relative;display: block;padding: 2em;padding-right: 11em;
+				@include respond-to('ly-m'){
+					padding: 1em;
+				}
+				&:before{
+					content:'';display: block;position: absolute;top: 0;right: 0;bottom: 0;left: 0;border: 1px solid #ccc;
+				}				
+				&:after{
+					content:'';display: block;position: absolute;right: 20px;top: 50%;margin-top: -12px;opacity: 0;
+					@include getSprite($order-order_type_check);
+					@include respond-to('ly-m'){
+						top: auto;bottom: 25px;margin-top: 0;
+						@include getSpriteRetina($order-order_type_check_m);
+					}
+				}
+				&:hover:before{
+					border-width: 4px;border-color: $color-red;
+					@include respond-to('ly-m'){
+						border-width: 2px;
+					}
+				}
+				strong{display: block;font-size: 1.5em;line-height: 1;}
+				span{display: block;margin-top: 0.5em;
+					@include respond-to('ly-m'){
+						margin-bottom: 0.5em;
+					}
+				}
+				.img{
+					display: block;position: absolute;right: 80px;top: 50%;margin-top: -36px;opacity: 0.3;
+					@include respond-to('ly-m'){
+						position: static;margin-top: 0;
+					}
+					&.delivery{
+						@include getSprite($order-order_type_delivery);
+						@include respond-to('ly-m'){
+							@include getSpriteRetina($order-order_type_delivery);
+						}
+					}
+					&.pickup{
+						@include getSprite($order-order_type_pickup);
+						@include respond-to('ly-m'){
+							@include getSpriteRetina($order-order_type_pickup);
+						}
+					}
+				}
+			}
+			&.on{
+				a{
+					&:before{border-width: 4px;border-color: $color-red;
+						@include respond-to('ly-m'){
+							border-width: 2px;
+						}
+					}
+					&:after{opacity: 1;}
+					strong{color: $color-black;}
+					.img{opacity: 1;}
+				}
+			}
+		}
+	}
+}
+
+.order_address{
+	border-top: 1px solid #aaa;
+	> dl{
+		display: table;border-bottom: 1px solid #dddddd;width: 100%;
+		@include respond-to('ly-m'){
+			display: block;padding: 1em;
+		}
+		> dt, > dd{display: table-cell;vertical-align: middle;padding: 1.25em;
+			@include respond-to('ly-m'){
+				display: block;padding: 0;
+			}
+		}
+		> dt{width: 5em;color:$color-black;font-size: 1.25em;
+			@include respond-to('ly-m'){
+				width: auto;margin-bottom: 1em;
+			}
+		}
+		> dd{
+			padding-left: 0;
+			&:after{
+				@include clearFix;
+			}
+		}
+	}
+	.address_list{		
+		li{display: flex;justify-content: space-between;align-items: center;padding: 0.25em 0;
+			&.none{display: block;padding: 2em 0;text-align: center;}
+		}
+		.radio{
+			width: 40em;
+			@include respond-to('ly-l'){
+				width: 25em;
+			}
+			@include respond-to('ly-m'){
+				width: 15em;
+			}
+		}
+	}
+	.inp_zipcode{
+		float: left;width: 48%;
+		@include respond-to('ly-m'){
+			float: none;width: auto;
+		}
+		+ .address_list{
+			float: right;width: 48%;
+			@include respond-to('ly-m'){
+				float: none;width: auto; margin-top: 2em;
+			}
+			.radio{width: 20em;
+				@include respond-to('ly-l'){
+					width: 15em;
+				}
+			}
+		}
+	}
+}
+
+.order_store{
+	padding: 0.625em;border: 1px solid $color-gray2;
+	strong{display: inline-block;padding: 0em 1em;color: $color-black;line-height: 40px;vertical-align: middle;
+		@include respond-to('ly-m'){
+			line-height: 30px;
+		}
+	}
+	.button{margin-left: 1em;}
+}
+
+.cart_list{margin-top: 2em;
+	img{max-width: 100%}
+	> ul{display: table;border-top: 1px solid #aaa;width: 100%;table-layout:fixed;
+		@include respond-to('ly-m'){
+			display: block;
+		}
+		> li{
+			display: table-row;
+			@include respond-to('ly-m'){
+				position: relative;display: block;border-bottom: 1px solid #ddd;padding: 1em;
+				&:after{
+					@include clearFix;
+				}
+			}
+			> div{display: table-cell;padding: 1.25em;vertical-align: middle;border-bottom: 1px solid #ddd;
+				@include respond-to('ly-xl'){
+					padding: 1em;
+				}
+				@include respond-to('ly-m'){
+					display: block;border-bottom: 0 none;padding: 0;
+				}
+				+ div{padding-left: 0;
+					@include respond-to('ly-m'){
+						margin-left: 35%;
+					}
+				}
+				&.ct_img{width: 170px;
+					@include respond-to('ly-xl'){
+						width: 120px;
+					}
+					@include respond-to('ly-m'){
+						float: left;width: 30%;
+					}
+				}
+				&.ct_info{
+					> strong{display: block;color: $color-black;
+						@include respond-to('ly-m'){
+							padding-right: 40px;
+						}
+					}
+				}
+				&.ct_count{width: 140px;
+					@include respond-to('ly-m'){
+						width: auto;margin-top: 1em;
+					}
+				}
+				&.ct_price{width: 160px;text-align: right;
+					@include respond-to('ly-l'){
+						width: 120px;
+					}
+					@include respond-to('ly-m'){
+						width: auto;margin-top: -27px;
+					}
+					.t_price{font-size: 2em;
+						@include respond-to('ly-l'){
+							font-size: 1.5em;
+						}
+					}
+				}
+				&.ct_btn{width: 60px;
+					@include respond-to('ly-m'){
+						width: auto;position: absolute;right: 1em;top: 1em;
+					}
+					.button{
+						@include btnWidth(60px);
+						@include respond-to('ly-m') {
+							line-height: 18px;height: 20px;font-size: 11px;
+							@include btnWidth(30px);
+						}
+					}
+				}
+			}
+		}
+	}
+	.total{
+		padding: 1em;padding-right: 100px;text-align: right;border-bottom: 1px solid #ddd;color: $color-black;
+		@include respond-to('ly-m'){
+			padding: 1em;
+		}
+		>strong{display: inline-block;font-size: 1.5em;padding: 0.229em 0;margin-right: 2em;vertical-align: middle;
+			@include respond-to('ly-l'){
+				font-size: 1.25em;
+			}
+		}
+		.t_price{display: inline-block;font-size: 2em;vertical-align: middle;
+			@include respond-to('ly-l'){
+				font-size: 1.5em;
+			}
+			strong{color: $color-red;}
+		}
+	}
+}
+
+.payment_wrap{
+	margin-top: 3em;
+	&:after{
+		@include clearFix;
+	}
+	> div{float: left;width: 50%;box-sizing:border-box;
+		@include respond-to('ly-m'){
+			float: none;width: auto;
+		}
+	}
+	> .left{padding-right: 20px;}
+	> .right{padding-left: 20px;}
+	@include respond-to('ly-l'){
+		> .left{padding-right: 10px;}
+		> .right{padding-left: 10px;}
+	}
+	@include respond-to('ly-m'){
+		> .left{padding-right: 0px;}
+		> .right{padding-left: 0px;
+			.cont_tit{margin-top: 2.4em;}
+		}
+	}
+	.box{border-top: 1px solid #aaa;border-bottom: 1px solid #ddd;
+		> ul{
+			padding: 0.5em 0;
+			> li{
+				padding: 0.5em 1em;
+				&:after{
+					@include clearFix;
+				}
+				&.line{border-top: 1px solid #ddd;}
+				> strong{display: block;float:left;width: 5em;padding:0.49em 1em 0.49em 0;color: $color-black;font-weight: 500;
+					@include respond-to('ly-l'){
+						float: none;width: auto;
+					}
+				}
+				> div{margin-left: 6em;
+					@include respond-to('ly-l'){
+						margin-left: 0;margin-top: 0.5em;
+					}
+				}
+			} 
+		}
+		.lbl i{display:inline-block;vertical-align: top;
+			&.kakao{@include getSprite($order-kakaopay);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($order-kakaopay_m);
+				}
+			}
+			&.naver{@include getSprite($order-naverpay);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($order-naverpay_m);
+				}
+			}
+		}
+	}
+	.pay_coupon{ padding:1em 2em;
+		.inp_btn{margin-bottom: 1em;}
+		.cp_btn{
+			margin: 2em 0 1em;
+			> a{
+				display: block;border: 1px solid #ddd;text-align: center;color: $color-black;padding: 1.5em 0;
+				i{
+					display: inline-block;vertical-align: middle;
+					@include getSprite($order-ic_cp_btn);
+					@include respond-to('ly-m'){
+						@include getSpriteRetina($order-ic_cp_btn);
+					}
+				}
+				span{display: inline-block;vertical-align: middle;margin-left: 1em;}
+			}
+		}
+		.dc_price{font-size: 1.25em;margin-top: 1em;}
+	}
+}
+.dc_price{text-align: center;color: $color-red;
+	strong{display:inline-block;min-width:4em;text-align: right;}
+}
+.pay_total{
+	padding: 0 2em;margin-bottom: 1em;background: #f3f3f3;
+	@include respond-to('ly-l'){
+		padding: 0 1em;
+	}
+	> p{padding: 0.75em 0;}
+	.total_price{border-bottom: 0 none;
+		> div{padding: 2em 0.3em;}
+		.t_price{font-size: 1.5em;
+			@include respond-to('ly-l'){
+				font-size: 1.25em;
+			}
+		}
+	}
+}
+.order_complate{
+	position: relative;display: table;width: 100%;border: 1px solid #ddd;
+	@include respond-to('ly-m'){
+		display: block;padding: 2em 1em;width: auto;
+	}
+	> div{
+		display: table-cell;width: 50%;padding: 3em;
+		@include respond-to('ly-m'){
+			display: block;width: auto;padding: 0;
+			+ div{padding-top: 2em;margin-top: 2em;border-top: 1px solid #ddd;}
+		}
+	}
+	&:before{
+		content:'';display: block;position: absolute;width:1px;left: 50%;top: 3em;bottom: 3em;background: #ddd;
+		@include respond-to('ly-m'){
+			display: none;
+		}
+	}
+	h4{color: $color-black;font-size: 1.25em;margin-bottom: 0.5em;}
+	hr{margin: 3em 0;}
+	.scroll{max-height: 314px;overflow-x: hidden;overflow-y: auto;margin-top: 1em;}
+	.complate_info{padding: 2em 0.5em;text-align: center;background: #eee;
+		> div{display:inline-block;
+			&:before{
+				content:'';display: inline-block;vertical-align: middle;
+			}
+			&.delivery:before{
+				@include getSprite($order-complate_delivery);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($order-complate_delivery);
+				}
+			}
+			&.pickup:before{
+				@include getSprite($order-complate_pickup);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($order-complate_pickup);
+				}
+			}
+			>strong, >span{display:inline-block;vertical-align: middle;margin-left: 1em;}
+			>strong{padding: 0 1em;color: $color-black;}
+		}
+	}
+}

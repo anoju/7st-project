@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">비밀번호 변경</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>비밀번호 변경</strong></li>
+                    </ul>
+                </div>
+                <div class="member_box">
+                    <div class="tbl">
+                        <div class="col pw_change_wrap">
+                            <h4>비밀번호를 다시 한 번 점검해 주세요.</h4>
+                            <ul class="txt_list">
+                                <li>고객님의 소중한 정보를 안전하게 보호하고, 개인정보 도용으로 인한 피해를 막기 위하여 비밀번호 변경을 안내해 드리고 있습니다.</li>
+                                <li>6개월 이내 비밀번호를 변경하지 않은 경우, 새 비밀번호로 변경해 주세요.</li>
+                            </ul>
+                            <div class="pw_change">
+                                <ul>
+                                    <li>
+                                        <strong>현재 비밀번호</strong>
+                                        <div class="inp_wid"><input type="password" class="input col" placeholder="현재 비밀번호 입력" title="현재 비밀번호 입력" /></div>
+                                    </li>
+                                    <li>
+                                        <strong>새 비밀번호</strong>
+                                        <div class="inp_wid"><input type="password" class="input col" placeholder="영문, 숫자 조합 8~20자" title="새 비밀번호 입력" /></div>
+                                    </li>
+                                    <li>
+                                        <strong>새 비밀번호 확인</strong>
+                                        <div class="inp_wid"><input type="password" class="input col" placeholder="새 비밀번호 재입력" title="새 비밀번호 재입력" /></div>
+                                    </li>
+                                    <li>
+                                        <div class="inp_wid wid2">
+                                            <button class="button btn_gray col">비밀번호 변경</button>
+                                            <a href="#" class="button col">다음에 변경</a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div>
+                                    <p class="t_red">※ 다음에 변경하기를 선택하신 경우, 다음 번 로그인 하실 때 변경하실 수 있습니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+</body>
+</html>

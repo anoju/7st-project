@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+$color-default: #666;
+$color-black: #222;
+$color-gray: #999;
+$color-gray2: #ccc;
+$color-red: #ec1c24;
+$color-red2: #ff635d;
+$color-yellow: #ffc000;
+$color-orange: #ea7724;
+$color-green: #18a327;
+$color-blue: #1d9bd8;
+$color-blue2: #0000ff;
+$color-blue: #1d9bd8;
+
+$main-color: $color-red;
+
+$cubic-bezier: cubic-bezier(.5,.2,.3,1);
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+/* base */
+body, h1, h2, h3, h4, h5, h6, fieldset,ul, ol, dl, dt, dd, p, button ,figure{margin:0;padding:0;}
+body{font:normal 16px/1.5 'Noto Sans KR', Apple SD Neo Gothic, "Apple SD Gothic Neo", AppleSDGothicNeo, Roboto, Droid sans, Microsoft NeoGothic, malgun gothic, sans-serif, Verdana;color:$color-default;letter-spacing:-1px;word-break: keep-all;
+	@include respond-to('ly-m'){			
+		font-size: 12px;
+	}
+}
+strong, b{font-weight: bold;}
+legend, caption{width:0;height:0;visibility:hidden;font-size:0;line-height:0;}
+a{text-decoration:none;color:inherit;}
+a[href^="tel"]{cursor: default;}
+img{vertical-align:middle;}
+fieldset, button{background:none;border:0px;}
+ul:after,ol:after{content:'';display:block;clear:both;}
+li{list-style:none;}
+table{width:100%;border-spacing:0px;border-collapse:collapse;font-size:1em;}
+iframe{width:100%;vertical-align:middle;border:0 none;}
+hr{margin:1.25em 0;border:0 none;height:1px;background:$color-gray2;}
+button, input, optgroup, select, textarea{font-family:inherit;}
+
+/* Chrome, Safari용 스크롤 바 */
+::-webkit-scrollbar{width:8px;height:8px;border:3px solid #fff;}
+::-webkit-scrollbar-track{background:#efefef;border-radius:10px;box-shadow:inset 0 0 4px rgba(0,0,0,.2)}
+::-webkit-scrollbar-thumb{height:50px;width:50px;background:rgba(0,0,0,.2);border-radius:8px;box-shadow:inset 0 0 4px rgba(0,0,0,.1)}
+
+

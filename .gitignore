@@ -1,0 +1,9 @@
+.vscode/
+node_modules/
+src/scss/_sprite.scss
+dist/sprite.png
+dist/images/
+dist/css/
+dist/js/ui/
+html/
+html_/

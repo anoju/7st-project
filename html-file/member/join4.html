@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">회원가입</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>회원가입</strong></li>
+                    </ul>
+                </div>
+                <div class="join_flow_wrap">
+                    <ol class="join_flow">
+                        <li>STEP 1 <span>회원선택</span></li>
+                        <li>STEP 2 <span>본인확인</span></li>
+                        <li>STEP 3 <span>정보입력</span></li>
+                        <li class="on">STEP 4 <span>가입완료</span></li>
+                    </ol>
+                </div>
+
+                <div class="member_box">
+                    <div class="tbl">
+                        <div class="col">                        
+                            <div class="step4">
+                                <h4>환영합니다!<br />7번가피자 회원으로 가입되었습니다.</h4>
+								<p>고객님의 아이디는 <strong class="t_red">7thpizza</strong> 입니다.<br />PC와 휴대폰에서 쉽고 빠르게 7번가피자를 만나세요!</p>
+								<div class="inp_wid wid2">
+									<a href="#" class="button btn_red h50 col">로그인</a>
+									<a href="#" class="button btn_black h50 col">홈으로</a>
+								</div>
+                            </div>
+                        </div>
+                        <div class="col img">
+                            <img src="../../dist/images/member/join_banner.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+</body>
+</html>

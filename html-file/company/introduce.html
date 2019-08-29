@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">7번가 소개</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">회사소개</a></li>
+                        <li><strong>7번가 소개</strong></li>
+                    </ul>
+                </div>
+                <div class="introduce_cont">
+                    <div class="part01">
+                        <h4>가맹점의 수익을 최우선으로 하는 7번가 피자!</h4>
+                        <p>천천히.. 우직하게.. 정도를 걸어갑니다.</p>
+                        1997년부터 20여년 동안 7번가피자는 가맹점의 수익을 최우선 목표로 하는 
+                        프랜차이즈의 정도를 걷고자 노력하고 있습니다. <br /><br />
+
+                        가맹점이 성공해야 프랜차이즈 본사도 함께 성장할 수 있다는 믿음으로 이곳까지 
+                        왔으며, 앞으로도 가맹점 숫자를 늘리기 보다는 우직하게 천천히 고객과 
+                        가맹점의 신뢰를 바탕으로 함께 나아갈 것 입니다. <br /> <br />
+
+                        향후 수 십 년 뒤에도 대한민국의 진정한 프랜차이즈로 성장해 있는 7번가 피자를 
+                        지켜봐 주십시오.
+                    </div>
+                    <div class="part02">
+                        <p>많이 팔면 남는다....??</p>
+                        외국계 프랜차이즈의 로열티 및 광고비가 10%를 웃도는 현실에서 아무리 팔아도 
+                        본사만 좋을 일 시켜준다는 한 번 쯤 들어 본 이야기. <br /> <br />
+
+                        국내 유명 프랜차이즈의 재료비가 50%가 풀쩍 넘어가고 5년 전후로 리모델링을 
+                        강요한다는 한 번 쯤 들어 본 이야기. <br /> <br />
+
+                        7번가 피자에서는 이런 이야기가 너무 생소하게 들릴 정도로 본사가 아닌 
+                        가맹점의 수익을 최우선 목표로 운영하고 있습니다.
+                    </div>
+                </div>
+                
+                <div class="introduce_map_cont">
+                    <div id="map" class="map"></div>
+                    <div class="txt_area">
+                        <h4><span>7번가피자 본사 위치</span></h4>
+                        <dl>
+                            <dt>서울본사</dt>
+                            <dd>서울시 마포구 노고산동 106-7 BS타워 14층(서강로 132)</dd>
+                            <dt>가맹점 창업문의 및 고객문의 </dt>
+                            <dd>TEL <strong class="t_red">02.702.7020</strong>  /  FAX 02.702.7097</dd>
+                            <dt>대표주문번호</dt>
+                            <dd><strong class="t_blue">1688-7887</strong></dd>
+                        </dl>
+                    </div>
+                </div>
+                    
+
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=JMiQ38lKpwKi9s43B9Fh&amp;submodules=geocoder"></script>
+<script type="text/javascript">	
+    mapchange('서울시 마포구 노고산동 106-7','map');
+
+    function mapchange(addr,wrapId){	
+		naver.maps.Service.geocode({ address: addr }, function(status, response) {
+			if (status === naver.maps.Service.Status.ERROR) {
+				return;
+			}
+			// 성공시의 response 처리
+			var result = response.result, // 검색 결과의 컨테이너
+            items = result.items; // 검색 결과의 배열
+			
+			if(items.length > 0){				
+				var obj2 = items[0];
+				$('#'+wrapId).html("");
+				initNaverMapV3(obj2.point.y,obj2.point.x,wrapId);
+			}			
+		});
+	}
+	function initNaverMapV3(y, x,wrapId){
+	    //console.log(shop_id);
+		var map = new naver.maps.Map(wrapId, {
+			center: new naver.maps.LatLng(y, x),
+			zoom: 12
+		});
+
+		var marker = new naver.maps.Marker({
+			position: new naver.maps.LatLng(y, x),
+			map: map,
+            icon: {
+                url: '/dist/images/common/map_pin.png',
+                size: new naver.maps.Size(33, 46),
+                origin: new naver.maps.Point(0, 0),
+                anchor: new naver.maps.Point(17, 46)
+            }
+		});
+	}
+</script>
+</body>
+</html>

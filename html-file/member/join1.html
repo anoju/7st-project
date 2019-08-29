@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">회원가입</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>회원가입</strong></li>
+                    </ul>                    
+                </div>
+                <div class="join_flow_wrap">
+                    <ol class="join_flow">
+                        <li class="on">STEP 1 <span>회원선택</span></li>
+                        <li>STEP 2 <span>본인확인</span></li>
+                        <li>STEP 3 <span>정보입력</span></li>
+                        <li>STEP 4 <span>가입완료</span></li>
+                    </ol>
+                </div>
+
+                <div class="member_box">
+                    <div class="tbl">
+                        <div class="col">                        
+                            <div class="step1">
+                                <h4>7번가피자에 오신 것을 환영합니다!</h4>
+                                <p>회원가입 후 더 빠르고 편리하게 7번가피자를 만나세요!</p>
+                                <a href="#" class="button btn_red h50 w_100">회원가입</a>
+                                <hr />
+                                <div class="sns_member">
+                                    <strong>간편가입</strong>
+                                    <span>
+                                        <a href="#" class="naver">네이버</a>
+                                        <a href="#" class="kakao">카카오톡</a>
+                                        <a href="#" class="facebook">페이스북</a>
+                                    </span>
+                                </div>
+                                <ul class="txt_list">
+                                    <li>회원가입은 만 14세 이상 가능합니다.</li>
+                                    <li>고객님의 개인정보부터 구매내역, 주문, 배송에 대한 조회가 가능합니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col img">
+                            <img src="../../dist/images/member/join_banner.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+</body>
+</html>

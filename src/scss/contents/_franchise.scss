@@ -1,0 +1,451 @@
+@charset 'utf-8';
+
+.form_box{
+    border: 1px solid #ddd;padding: 3em 0;
+    @include respond-to('ly-l'){
+		padding: 2em;
+	}
+    > .txt{padding:0 3em 2em;
+        @include respond-to('ly-l'){
+            padding: 0 0 2em;
+        }
+        h4{color:$color-black;font-size: 1.75em;}
+        p{font-size: 1.25em;}
+    }
+    .tbl{display: table;
+        @include respond-to('ly-l'){
+            display: block;
+        }
+        > div{display: table-cell;width: 50%;padding:0 3em;vertical-align: top;
+            @include respond-to('ly-l'){
+                display: block;width: auto;padding: 0;
+            }
+            + div{border-left: 1px solid #ddd;
+                @include respond-to('ly-l'){
+                    padding-top: 2em;margin-top: 2em;border-left: 0 none;border-top: 1px solid #ddd;
+                }
+            }
+        }
+    }
+    .rules_txt{
+        margin-bottom: 0.875em;height:13em;padding: 0.5em;border: 1px solid #ddd;
+    }
+    .form_list{
+        width: auto;
+        > ul{padding: 0;border: 0 none;
+            > li{
+                +li{margin-top: 20px;}
+                > strong{width: 5em;padding-left: 0;padding-right: 0;}
+                > div{margin-left: 5.5em;}
+                .inp_wid{padding-right: 0;}
+            }
+        }
+    }
+}
+.knowhow_txt{
+    .tit{color: $color-black;font-size: 1.5em;margin-bottom: 1em;line-height: 1.2;
+        strong{position: relative;display: inline-block;font-size: 1.5em;color: $color-red;padding: 0 0.75em 0 0.3em;margin: 0 0.3em;border: 3px solid $color-red;border-radius: 3px;vertical-align: -5px;
+            @include respond-to('ly-m'){
+                margin-top: 5px;vertical-align: -3px;
+            }
+            &:before{content:'';display: block;background: #fff;position: absolute;right: -3px;top: -3px;width: 10px;height: 60%;}
+            &:after{
+                content:'';display: block;position: absolute;right: -0.35em;top: 0px;width: 0.85em;height: 10px;border: 3px solid $color-red;border-width: 0 0 3px 3px;transform: rotate(-45deg);
+                @include respond-to('ly-m'){
+                    height: 8px;
+                }
+            }
+        }
+    }
+}
+
+.knowhow_tbl{
+    td{width: 50%;padding: 2em;border: 1px solid #dddddd;
+        @include respond-to('ly-m'){
+            padding: 1em;
+        }
+        strong{color: $color-black;}
+        > strong{display: block;font-size: 1.25em;margin-bottom: 0.5em;
+            &:before{
+                content: '';display: inline-block;vertical-align: -6px;margin-right: 5px;
+                @include getSprite($franchise-ic_check);
+                @include respond-to('ly-m'){
+                    vertical-align: middle;
+                    @include getSpriteRetina($franchise-ic_check);
+                }
+            }
+        }
+        > div{padding-left: 35px;font-size: 0.875em;
+            @include respond-to('ly-m'){
+                padding-left: 0;
+            }
+        }
+        &.last{
+            color: $color-black;background: #eee url(../images/franchise/bg_knowhow_tbl.png) no-repeat right bottom;
+            @include respond-to('ly-m'){
+                background-image: url(../images/franchise/bg_knowhow_tbl_m.png);
+                background-size: 75px auto;
+            }
+            div{
+                padding-left: 0;font-size: 1em;
+                @include respond-to('ly-m'){
+                    padding-bottom: 1em;
+                }
+                span{font-size: 0.875em;}
+                strong{display:inline-block;font-size: 1.25em;vertical-align: middle;margin-right: 1em;
+                    @include respond-to('ly-m'){
+                        display: block;margin-bottom: 1em;font-size: 1.125em;
+                    }
+                }
+                p{line-height: 40px;
+                    @include respond-to('ly-m'){
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }   
+    }
+}
+
+.success_story{
+    position: relative;background: #eeeeee;padding: 0 5em;
+    @include respond-to('ly-l'){
+        padding: 0 3em;
+    }
+    @include respond-to('ly-m'){
+        padding: 0 2em;
+    }
+    
+    .txt{margin: 3em 1em;background: #fff;padding: 2em;padding-right: 4em;min-height: 380px;box-sizing:border-box;box-shadow:0 5px 5px #ccc;
+        @include respond-to('ly-m'){
+            min-height: 190px;
+        }
+        > div{
+            position: relative;z-index: 1;
+            > strong{display: block;color: $color-black;margin-bottom: 1em;}
+            > div{font-size: 0.875em;}
+        }
+    }
+    .img{position: absolute;right: 0;bottom: 0;width: 100%;text-align: right;
+        img{max-width: 50%;}
+    }
+    .control{
+		> a{
+            position: absolute;top:50%;z-index:10;margin-top:-29px;
+            @include respond-to('ly-m'){
+                margin-top: -15px;
+            }
+			&.btn_prev{
+				left: 20px;   
+				@include getSprite($main-main_banner_prev);
+                &:hover{@include getSprite($main-main_banner_prev_on);}				
+                @include respond-to('ly-l'){
+                    left: 10px;
+                }
+                @include respond-to('ly-m'){
+                    @include getSpriteRetina($main-main_banner_prev);
+                    &:hover{@include getSpriteRetina($main-main_banner_prev_on);}				
+                }
+			}
+			&.btn_next{
+				right:20px;
+				@include getSprite($main-main_banner_next);
+                &:hover{@include getSprite($main-main_banner_next_on);}				
+                @include respond-to('ly-l'){
+                    right: 10px;
+                }
+                @include respond-to('ly-m'){
+                    @include getSpriteRetina($main-main_banner_next);
+                    &:hover{@include getSpriteRetina($main-main_banner_next_on);}				
+                }
+			}
+        }
+    }
+}
+.support_txt{
+    .support_tit{
+        &.tit1{
+            padding: 1em 0;background: url(../images/franchise/bg_support_tit1.png) no-repeat 95% center;
+            @include respond-to('ly-xl'){
+                padding-right: 230px;background-position: right center;
+            }
+            @include respond-to('ly-m'){
+                padding-right: 115px;background-size: 108px auto;
+            }
+        }
+        &.tit2{
+            padding: 2em 0;background: url(../images/franchise/bg_support_tit2.png) no-repeat 90% center;
+            @include respond-to('ly-xl'){
+                padding-right: 350px;background-position: right center;
+            }
+            @include respond-to('ly-m'){
+                padding: 1em 50px 4.5em 0;background-position: right bottom;background-size: 170px auto;
+            }
+        }
+        .cont_tit{margin-bottom: 0.3em;}
+        > div{font-size: 1.25em;
+            @include respond-to('ly-m'){
+                font-size: 1em;
+            }
+        }
+    }
+    .support_list{
+        margin: 4em 0;overflow: hidden;
+        @include respond-to('ly-m'){
+            margin: 3em 0;
+        }
+        > ol{
+            margin: 0 -5px;
+            @include respond-to('ly-m'){
+                margin: 0;
+            }
+            > li{
+                float: left;width: 33.33%;padding: 0 25px;box-sizing: border-box;
+                @include respond-to('ly-xl'){
+                    padding: 0 15px;
+                }
+                @include respond-to('ly-m'){
+                    width: 50%;padding: 0 5px 2em;
+                    &:nth-child(odd){
+                        clear: both;
+                    }
+                }
+            }
+        }
+        .img{position: relative;
+            img{width: 100%;}
+            strong{
+                display: block;position: absolute;top: 20px;left: -20px;width: 60px;line-height: 60px;text-align: center;color: #fff;background: $color-blue;font-size: 1.75em;
+                @include respond-to('ly-xl'){
+                    top: 10px;left: -10px;width: 45px;line-height: 45px;font-size: 1.5em;
+                }
+                @include respond-to('ly-m'){
+                    top: 5px;left: -5px;width: 30px;line-height: 30px;font-size: 1.25em;
+                }
+            }
+        }
+        .txt{
+            > strong{display: block;padding: 0.5em 0;color: $color-black;}
+            > p{font-size: 0.875em;}
+        }
+    }
+    .support_list2{
+        margin-top: 2em;
+        > ol{
+            > li{
+                float: left;width: 50%;padding: 0 20px;box-sizing: border-box;
+                @include respond-to('ly-xl'){
+                    padding: 0 10px;
+                }
+                @include respond-to('ly-m'){
+                    float: none;width: auto;padding: 0 5px;
+                     + li{margin-top: 3em;}
+                }
+            }
+        }
+        .img{position: relative;            
+            img{width: 100%;}
+            strong{
+                display: block;position: absolute;top: 20px;width: 60px;line-height: 60px;text-align: center;color: #fff;background: $color-red;font-size: 1.75em;
+                @include respond-to('ly-xl'){
+                    top: 10px;width: 45px;line-height: 45px;font-size: 1.5em;
+                }
+                @include respond-to('ly-m'){
+                    top: 5px;width: 30px;line-height: 30px;font-size: 1.25em;
+                }
+            }
+        }
+        .left .img{padding-right: 20px;
+            @include respond-to('ly-m'){
+                padding-right: 0;
+            }
+            strong{
+                left: -20px;
+                @include respond-to('ly-xl'){
+                    left: -10px
+                }
+                @include respond-to('ly-m'){
+                    left: -5px
+                }
+            }
+        }
+        .right .img{padding-left: 20px;
+            @include respond-to('ly-m'){
+                padding-left: 0;
+            }
+            strong{
+                right: -20px;
+                @include respond-to('ly-xl'){
+                    right: -10px
+                }
+                @include respond-to('ly-m'){
+                    right: -5px
+                }
+            }
+        }
+        .txt{
+            strong{color: $color-black;}
+            > p{display: block;padding: 0.5em 0;
+                @include respond-to('ly-m'){
+                    strong{display: block;}
+                }
+            }
+            > div{font-size: 0.875em;padding-bottom: 1em;}
+        }
+        .right .txt{text-align: right;}
+    }
+}
+.process_txt{
+    .process_area{
+        position: relative;padding: 0.75em 0 2.75em;padding-right: 16em;
+        @include respond-to('ly-m'){
+            padding-right: 0;
+        }
+        &:after{
+            @include clearFix;
+        } 
+        .img{
+            position: absolute;right: 0;top: 0;width: 182px;
+            @include respond-to('ly-m'){
+               position: static; float: right;width: 91px;margin-top: -2em;padding-left: 1em;
+            }
+            img{width: 100%;}
+        }
+        .sub{font-size: 1.25em;margin-bottom: 0.5em;}
+    }
+}
+.process_list{
+     > ol{
+         > li{
+            .img{position: relative;float: left;padding: 0 20px;width: 48.33%;box-sizing:border-box;
+                @include respond-to('ly-m'){
+                    padding: 0 10px;float: none;width: auto;
+                }
+                img{width: 100%;}
+                strong{display: block;position: absolute;left: 0;top: 20px;width: 60px;line-height: 60px;text-align: center;color: #fff;background: $color-red;font-size: 1.75em;
+                    @include respond-to('ly-m'){
+                        top: 10px;width: 30px;line-height: 30px;font-size: 1.25em;
+                    }
+                }
+            }
+            .txt{padding:0 4em;margin-left: 48.33%;width: 51.66%;box-sizing:border-box;text-align: center;
+                @include respond-to('ly-m'){
+                    margin-left: 0;width: auto;padding: 0 10px;
+                }
+                .tit{
+                    padding: 2em 0 1em;font-size: 1.25em;color: $color-black;
+                    @include respond-to('ly-m'){
+                        padding-top: 1em;
+                    }
+                    strong{display:inline-block;border-bottom: 2px solid $color-red;}
+                }
+                > div{font-size: 0.875em;padding-bottom: 5em;text-align: left;}
+                ul{display: inline-block;text-align: left;font-size: 0.875em;
+                    .ic_txt{margin-left: 1em;}
+                }
+            }
+            + li{
+                .img{float: right;
+                    @include respond-to('ly-m'){
+                        float: none;
+                    }
+                    strong{left: auto;right: 0;}
+                }
+                .txt{clear: left;margin-left: 0;}
+            }
+         }
+     }
+}
+.process_list2{
+    > ul{
+        margin: 0 -25px;
+        @include respond-to('ly-m'){
+            margin: 0 -10px;
+        }
+        > li{
+            position: relative;float: left;width: 25%;padding: 25px;box-sizing: border-box;            
+            @include respond-to('ly-m'){
+                padding: 10px;
+            }
+            &:after{
+                content:'';display: block;position: absolute;right: 0;top: 50%;margin: -7px -16px 0 0;
+                @include getSprite($franchise-arr_right);
+            }            
+            &.flow4{
+                &:after{
+                    right: 50%;top: auto;bottom: 0;margin: 0 -6px -16px 0;
+                    @include getSprite($franchise-arr_bottom);
+                }
+            }
+            @for $i from 5 through 8 {
+                &.flow#{$i} {
+                    float: right;
+                    @if $i == 8{
+                        &:after{
+                            display: none;
+                        }
+                    }@else{
+                        &:after{
+                            right: auto;left: 0;margin: -7px 0 0 -16px;
+                            @include getSprite($franchise-arr_left);
+                        }
+                    }
+                }
+            }
+            > div{position: relative;border: 1px solid #ddd;padding: 1em 1em 1em 6em;background-repeat: no-repeat;background-position: 15px center;
+                @include respond-to('ly-m'){
+                    padding: 0.5em 0.5em 0.5em 4em;background-size: 32px auto;background-position: 8px center;
+                }
+                > strong{display: block;color: $color-black;padding-bottom: 0.5em;}
+                > div{font-size: 0.875em;}
+            }
+            @for $i from 1 through 8 {
+                &.flow#{$i} {
+                    > div{
+                        background-image: url(../images/franchise/ic_process0#{$i}.png);
+                    }
+                }
+            }
+
+            @include respond-to('ly-l'){
+                width: 50%;
+                &.flow1,&.flow2,&.flow5,&.flow6{
+                    float: left;
+                }
+                &.flow3,&.flow4,&.flow7,&.flow8{
+                    float: right;
+                }
+                &.flow1,&.flow5{
+                    &:after{
+                        left:auto;position: absolute;right: 0;top: 50%;margin: -7px -16px 0 0;
+                        @include getSprite($franchise-arr_right);
+                        @include respond-to('ly-m'){
+                            margin: -3px -8px 0 0;
+                            @include getSpriteRetina($franchise-arr_right);
+                        }
+                    }
+                }
+                &.flow2,&.flow4,&.flow6{
+                    &:after{
+                        left: auto;right: 50%;top: auto;bottom: 0;margin: 0 -6px -16px 0;
+                        @include getSprite($franchise-arr_bottom);
+                        @include respond-to('ly-m'){
+                            margin: 0 -3px -8px 0;
+                            @include getSpriteRetina($franchise-arr_bottom);
+                        }
+                    }
+                }
+                &.flow3,&.flow7{
+                    &:after{
+                        right: auto;left: 0;margin: -7px 0 0 -16px;
+                        @include getSprite($franchise-arr_left);
+                        @include respond-to('ly-m'){
+                            margin: -3px 0 0 -8px;
+                            @include getSpriteRetina($franchise-arr_left);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

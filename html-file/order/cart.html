@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+	<!-- container -->
+	<div id="container">
+		<!-- contents -->
+		<section id="contents">
+			<div class="inner">
+				<div class="page_top">
+					<a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+					<h3 id="pageTit">장바구니</h3>
+					<ul id="location">
+						<li><a href="/">Home</a></li>
+						<li><strong>장바구니</strong></li>
+					</ul>
+				</div>
+				<div class="order_store">
+					<strong>방문포장</strong>
+					<strong>성수2호점</strong>
+					<button class="button btn_gray">변경</button>
+				</div>
+				<div class="cart_list">
+					<ul>
+						<li>
+							<div class="ct_img"><img src="../../dist/images/menu/@menu_view.png" alt="메뉴이름" /></div>
+							<div class="ct_info">
+								<strong>아빠앤나 R</strong>
+								<div class="add_opt">
+									<strong>엣지</strong>
+									<div><span>리코타링 크러스트(+2,000원)</span></div>
+								</div>
+								<div class="add_opt">
+									<strong>토핑</strong>
+									<div><span>치즈(+2,000원)</span><span>베이컨(+2,000원)</span></div>
+								</div>
+							</div>
+							<div class="ct_count">
+								<span class="inp_spinner" data-min="1" data-max="5">							
+									<span>
+										<input class="input" type="text" value="1" readonly="readonly">
+									</span>
+									<a href="#" class="btn btn_minus"><i class="fa fa-minus"></i><span class="blind">빼기</span></a>
+									<a href="#" class="btn btn_plus"><i class="fa fa-plus"></i><span class="blind">더하기</span></a>					
+								</span>
+							</div>
+							<div class="ct_price">
+								<span class="t_price"><strong>24,900</strong>원</span>
+							</div>
+							<div class="ct_btn">
+								<button class="button">삭제</button>
+							</div>
+						</li>
+						<li>
+							<div class="ct_img"><img src="../../dist/images/menu/@menu_view.png" alt="메뉴이름" /></div>
+							<div class="ct_info">
+								<strong>아빠앤나 R</strong>
+								<div class="add_opt">
+									<strong>엣지</strong>
+									<div><span>리코타링 크러스트(+2,000원)</span></div>
+								</div>
+								<div class="add_opt">
+									<strong>토핑</strong>
+									<div><span>치즈(+2,000원)</span><span>베이컨(+2,000원)</span></div>
+								</div>
+							</div>
+							<div class="ct_count">
+								<span class="inp_spinner" data-min="1" data-max="5">							
+									<span>
+										<input class="input" type="text" value="1" readonly="readonly">
+									</span>
+									<a href="#" class="btn btn_minus"><i class="fa fa-minus"></i><span class="blind">빼기</span></a>
+									<a href="#" class="btn btn_plus"><i class="fa fa-plus"></i><span class="blind">더하기</span></a>					
+								</span>
+							</div>
+							<div class="ct_price">
+								<span class="t_price"><strong>24,900</strong>원</span>
+							</div>
+							<div class="ct_btn">
+								<button class="button">삭제</button>
+							</div>
+						</li>
+					</ul>
+					<div class="total">
+						<strong>합계</strong>
+						<span class="t_price"><strong>55,400</strong>원</span>
+					</div>
+				</div>
+				<br />
+				<h4 class="t_black"> ※ 피클&amp;소스 기본 제공 안내</h4>
+				<ul class="txt_list">
+					<li>L : 피클 2개, 핫소스 2개, 갈릭디핑소스 15g 2개  /  M : 피클 1개, 핫소스 1개, 갈릭디핑소스 15g 1개</li>
+					<li>씬, 더블크러스트 치즈멜팅 피자는 갈릭디핑소스 미 제공</li>
+					<li>사이드디시 &gt; 피클&amp;소스 추가 구매 가능</li>
+				</ul>
+				
+				<div class="button_wrap btn2">
+                    <a href="#" class="button h50 btn_black">추가하기</a>
+                    <a href="#" class="button h50 btn_red">주문진행
+						<i class="ic_tooltip"><span class="t_red">할인</span>은 다음페이지에서 적용 가능</i>
+					</a>
+                </div>
+			</div>
+		</section>
+	</div>
+	<!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+</body>
+</html>

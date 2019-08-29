@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">마이페이지</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><strong>마이페이지</strong></li>
+                    </ul>
+                </div>
+                <ul class="tabmenu">
+                    <li><a href="#">주문내역</a></li>
+                    <li><a href="#">1:1 문의</a></li>
+                    <li class="on"><a href="#">개인정보수정</a></li>
+                    <li><a href="#">쿠폰관리</a></li>
+                </ul>
+                <div class="cont_in">
+                    <div class="form_list">
+                        <ul>
+                            <li>
+                                <strong>이름</strong>
+                                <div class="txt">홍길동</div>
+                            </li>
+                            <li>
+                                <strong>본인인증</strong>
+                                <div>
+                                    <a href="#" class="button btn_gray mr15">휴대폰인증</a>
+                                    <span class="inblock">주문을 위해 고객님의 휴대폰 인증이 반드시 필요합니다.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>비밀번호</strong>
+                                <div>
+                                    <button class="button btn_gray" onclick="$(this).hide().next().show()">비밀번호 변경</button>
+                                    <div class="hide">                                        
+                                        <div class="inp_wid"><input type="password" class="input col" placeholder="현재 비밀번호 입력" title="현재 비밀번호 입력" /></div>
+                                        <div class="inp_btn">
+                                            <input type="password" class="input" placeholder="새 비밀번호 입력" title="새 비밀번호 입력" />
+                                            <button class="button" onclick="$(this).parent().parent().hide().prev().show()">취소</button>
+                                        </div>
+                                        <div class="inp_btn">
+                                            <input type="password" class="input" placeholder="새 비밀번호 재입력" title="새 비밀번호 재입력" />
+                                            <button class="button btn_black">확인</button>
+                                        </div>
+                                        <div class="mt10 t_red">* 비밀번호는 영문,숫자 조합 8~20자</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>휴대폰번호</strong>
+                                <div>
+                                    <div class="inp_btn">
+                                        <div class="inp_wid wid3">
+                                            <select name="" id="" class="select col" title="휴대폰 앞자리">
+                                                <option value="010">010</option>
+                                            </select>
+                                            <input type="text" class="input col" title="휴대폰 중간자리" />
+                                            <input type="text" class="input col" title="휴대폰 뒷자리" />
+                                        </div>
+                                        <button class="button btn_gray">인증번호 발송</button>
+                                    </div>
+                                    <div class="inp_btn">
+                                        <input type="text" class="input" placeholder="인증번호 입력" title="인증번호 입력" />
+                                        <button class="button btn_gray">인증번호 확인</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><strong>생년월일</strong>
+                                <div>
+                                    <div class="inp_wid wid3">
+                                        <select name="" id="" class="select col" title="생일 년도">
+                                            <option value="">년</option>
+                                        </select>
+                                        <select name="" id="" class="select col" title="생일 월">
+                                            <option value="">월</option>
+                                        </select>
+                                        <select name="" id="" class="select col" title="생일 일">
+                                            <option value="">일</option>
+                                        </select>
+                                    </div>
+                                    <div class="inp_wid wid2">
+                                        <label class="radio col">
+                                            <input type="radio" name="rdoBirth" id="" /><i></i>
+                                            <span class="lbl">양력</span>
+                                        </label>
+                                        <label class="radio col">
+                                            <input type="radio" name="rdoBirth" id="" /><i></i>
+                                            <span class="lbl">음력</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>이메일</strong>
+                                <div class="inp_mail">
+                                    <input type="text" class="input" title="이메일 앞자리" />
+                                    <span>@</span>
+                                    <input type="text" class="input readonly" title="이메일 뒷자리" readonly="readonly" />
+                                    <select name="" id="" class="select" title="메일선택">
+                                        <option value="">선택</option>
+                                        <option value="">직접입력</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>주소</strong>
+                                <div>
+                                    <ul class="inp_zipcode">
+                                        <li>
+                                            <input type="text" class="input readonly" title="우편번호"  placeholder="우편번호" readonly="readonly" />
+                                            <a href="#popAddress" class="button btn_gray pop_open">주소검색</a>
+                                        </li>
+                                        <li>
+                                            <input type="text" class="input readonly" title="기본주소" placeholder="기본주소" readonly="readonly" />
+                                        </li>
+                                        <li>
+                                            <input type="text" class="input" title="상세주소" placeholder="상세주소" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="marketing">
+                                <h4>마켓팅 활용동의</h4>
+                                <p class="all_chk">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="marketingAllAgree" id=""><i></i>
+                                        <strong class="lbl">전체동의</strong>
+                                    </label>
+                                </p>
+                                <p class="fz_dw">마케팅/홍보를 위해 아래 항목의 정보를 이용하는데 동의하십니까?<br />동의 거부시 할인 및 이벤트 정보안내 서비스가 제한됩니다.</p>
+                                <br />
+                                <div class="inp_wid wid3">
+                                    <label class="checkbox col">
+                                        <input type="checkbox" name="marketingAgree" id=""><i></i>
+                                        <span class="lbl">이메일</span>
+                                    </label>
+                                    <label class="checkbox col">
+                                        <input type="checkbox" name="marketingAgree" id=""><i></i>
+                                        <span class="lbl">문자메시지</span>
+                                    </label>
+                                    <label class="checkbox col">
+                                        <input type="checkbox" name="marketingAgree" id=""><i></i>
+                                        <span class="lbl">주소</span>
+                                    </label>
+                                </div>
+                            </li>                        
+                        </ul>
+                    </div>
+                    <p class="form_etc"><a href="#" class="t_link gray">회원탈퇴</a></p>
+                    <div class="button_wrap">
+                        <a href="#" class="button h50 btn_red">정보수정</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+
+<!-- popup -->
+@@include('../popup/popAddress.html')
+<!-- //popup -->
+</body>
+</html>

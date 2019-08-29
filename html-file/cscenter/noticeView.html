@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="lt-ie10 lt-ie9 lt-ie8" lang="ko"><![endif]-->
+<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="ko"><![endif]-->
+<!--[if IE 9]><html class="lt-ie10" lang="ko"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="ko"><!--<![endif]-->
+<head>
+	@@include('../include/head.html',{"path":"../.."})
+</head>
+<body>
+@@include('../include/skipNavi.html')
+<!-- wrap -->
+<div id="wrap">
+	@@include('../include/header.html')
+    <!-- container -->
+    <div id="container">
+        <!-- contents -->
+        <section id="contents">
+            <div class="inner">
+                <div class="page_top">
+                    <a href="javascript:history.back()" class="btn_history_prev"><span>이전으로</span></a>
+                    <h3 id="pageTit">공지사항</h3>
+                    <ul id="location">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">고객센터</a></li>
+                        <li><strong>공지사항</strong></li>
+                    </ul>
+                </div>
+                <div class="cont_in">
+                    <ul class="list_view">
+                        <li class="tit">
+                            <h4>공지사항 제목 공지사항 제목 공지사항 제목 공지사항 제목</h4>
+                            <div class="right">
+                                <span class="date">2018.01.03</span>
+                            </div>
+                        </li>
+                        <li class="cont">
+                            <div>
+                                공지사항 내용 <br />
+                                공지사항 내용 <br />
+                                공지사항 내용 <br />
+                                공지사항 내용 <br />
+                                공지사항 내용 <br />
+                                공지사항 내용 <br />
+                                공지사항 내용 <br />
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="button_wrap">
+                        <a href="#" class="button h50 btn_black">목록</a>
+                    </div>
+
+                    @@include('./inc/contactList.html')
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- //container -->
+	@@include('../include/footer.html')
+</div>
+<!-- //wrap -->
+</body>
+</html>

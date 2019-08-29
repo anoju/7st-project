@@ -1,0 +1,423 @@
+@charset "UTF-8";
+
+.join_flow{
+	@include respond-to('ly-m'){
+		width: 100%;
+	}
+	>li{
+		position: relative;float: left;border-bottom: 2px solid #dddddd;padding: 0.625em 35px 0.625em 20px;color: #999999;
+		@include respond-to('ly-m'){
+			padding-left: 0;padding-right: 10px;width: 25%;box-sizing: border-box;text-align: center;
+			span{
+				display: block;
+			}
+		}
+		&:after{
+			content:'';display: block;width: 20px;height: 20px;border: 1px solid #999999;border-width: 0 1px 1px 0;text-align: right;position: absolute;right: 5px;top: 11px;transform: rotate(-45deg);
+			@include respond-to('ly-m'){
+				width: 10px;height: 10px;right: 3px;top: 20px;
+			}
+		}
+		&.on{
+			color: $color-black;font-weight: bold;color: $color-red;border-color: $color-red;
+			&:after{border-color: $color-red;}
+		}
+		&:first-child{
+			padding-left: 10px;
+			@include respond-to('ly-m'){
+				padding-left: 0px;
+			}
+		}
+		&:last-child{
+			padding-right: 10px;
+			@include respond-to('ly-m'){
+				padding-right: 0px;
+			}
+			&:after{display: none;}
+		}
+	}	
+}
+.join_flow_wrap{
+	overflow: hidden;margin:-2em 0 2em;
+	@include respond-to('ly-m'){
+		margin-top: -1.5em;
+	}
+	.join_flow{float: right;}
+}
+
+.member_box{
+	border: 1px solid #ddd;padding: 5em 0;
+	@include respond-to('ly-xl'){
+		padding: 3em 0;
+	}
+	@include respond-to('ly-l'){
+		padding:0 2em;
+	}
+	img{max-width:100%;}
+	.img{text-align: center;}
+	> div{
+		
+		&.txt{display: block;padding:0 5em;width: auto;
+			@include respond-to('ly-xl'){
+				padding:0 3em;
+			}
+			@include respond-to('ly-l'){
+				padding:0;
+			}
+		}
+		@include respond-to('ly-l'){
+			display: block;
+		}
+		&.tbl{
+			display: table;width: 100%;table-layout:fixed;
+			> div{
+				display: table-cell;width: 50%;padding: 0 5em;vertical-align: middle;
+				@include respond-to('ly-xl'){
+					padding:0 3em;
+				}
+				@include respond-to('ly-l'){
+					display: block;padding:2em 0;width: auto;
+				}
+				+ div{
+					border-left: 1px solid #ddd;
+					@include respond-to('ly-l'){
+						border-left: 0 none;border-top: 1px solid #ddd;
+					}
+				}
+			}
+		}
+	}
+	h4{
+		font-size: 1.25em;color: $color-black;
+	}
+	.step1{
+		> p{margin-top: 0.5em;}
+		> .button{margin-top: 1em;}
+		.sns_member{margin-bottom: 1.5em;}
+	}
+	.step4{
+		> p{margin-top: 1em;}
+		> .inp_wid{margin-top: 2em;}
+	}	
+	&.step2{
+		&.find{
+			border: 0 none;
+		}
+		@include respond-to('ly-l'){
+			padding: 2em;
+		}
+		> div{
+			width: 600px;margin-left:auto;margin-right:auto;box-sizing: border-box;
+			@include respond-to('ly-m'){
+				width: auto;
+			}
+		}
+		h4 + p{margin-top: 0.8em;}
+		.tbl{
+			margin: 2em auto;
+			@include respond-to('ly-l'){
+				margin: 0 auto;
+			}
+			@include respond-to('ly-m'){
+				width: 100%;
+			}
+			p{font-size: 0.875em;}
+		}
+		.btn_check{
+			display: block;line-height: 118px;border: 1px solid $color-default;text-align: center;color: $color-black;font-size: 1.25em;margin-bottom: 1em;
+			@include respond-to('ly-m'){
+				line-height: 73px;
+			}
+			i{
+				display: inline-block;vertical-align: middle;margin-right:20px;
+				&.ipin{@include getSprite($member-ic_ipin);}
+				&.phone{@include getSprite($member-ic_phone);}
+				@include respond-to('ly-m'){
+					&.ipin{@include getSpriteRetina($member-ic_ipin);}
+					&.phone{@include getSpriteRetina($member-ic_phone);}
+				}
+			}
+			strong{
+				display: inline-block;vertical-align: middle;line-height: 1.2;
+			}			
+		}
+	}
+	&.step3{
+		> div > div{vertical-align: top;}
+		h4{margin-bottom: 0.5em;}
+				
+		.button_wrap{margin: 2em 0 1em;}
+		.agree_list{
+			border: 1px solid #eee;
+			> li{				
+				+ li{border-top: 1px solid #eee;}
+				.chk{
+					position: relative;padding:1em;
+					.t_link_arr{
+						position: absolute;right: 1em;top: 50%;transform: translateY(-50%);font-size: 0.875em;
+					}
+				}
+				.rules_txt{
+					display: none;border-top: 1px solid #eee;height:13em;padding: 0.5em;
+				}
+				&.on{
+					.chk > a:after{
+						transform: rotate(180deg);
+					}
+					.rules_txt{display: block;}
+				}
+			}
+			+ h4{margin-top: 3em;}
+		}
+		.form_list{
+			width: auto;
+			> ul{border: 0 none;width: auto;padding: 0;}
+		}
+	}
+	&.login{
+		border: 0 none;
+		.inp_wid{margin-bottom: 2em;}
+		.rules_txt{
+			margin-bottom: 0.875em;height:13em;padding: 0.5em;border: 1px solid #ddd;
+		}
+	}
+	.dormant{
+		h4{
+			margin: 2.5em 0 1em;
+			&:first-child{margin-top: 0;}
+		}
+		.btn{
+			margin: 0 -20px;
+			@include respond-to('ly-l'){
+				margin: 0 -10px;
+			}
+			@include respond-to('ly-m'){
+				margin: 0;
+			}
+			> ul{
+				display: table;width: 100%;margin-bottom: 1em;
+				@include respond-to('ly-m'){
+					display: block;
+				}
+				> li{display: table-cell;width: 50%;padding: 0 20px;
+					@include respond-to('ly-l'){
+						padding: 0 10px;
+					}
+					@include respond-to('ly-m'){
+						display: block;width: auto;padding: 0;
+						+ li{margin-top: 10px;}
+					}
+					> a{
+						display: flex;height: 118px;padding: 0 10px;border: 1px solid $color-default;color: $color-black;justify-content: center;align-items: center;
+						@include respond-to('ly-m'){
+							height: 80px;
+						}
+						i{
+							display: inline-block;vertical-align: middle;margin-right: 15px;
+							&.user{@include getSprite($member-dormant_user);}
+							&.phone{@include getSprite($member-dormant_phone);}
+							&.ipin{@include getSprite($member-dormant_ipin);}
+							@include respond-to('ly-m'){
+								&.user{@include getSpriteRetina($member-dormant_user);}
+								&.phone{@include getSpriteRetina($member-dormant_phone);}
+								&.ipin{@include getSpriteRetina($member-dormant_ipin);}
+							}
+						}
+					}
+					> p{font-size: 0.875em;margin-top: 1em;}
+				}
+			}
+		}
+	}
+}
+.all_chk{position: relative;
+	.checkbox{position: absolute;right: 0;bottom: 0.6em;}
+}
+.form_etc{
+	width:800px;margin:0 auto;margin-top: 0.5em;
+	@include respond-to('ly-l'){
+		width: auto;
+	}
+	+ .button_wrap{margin-top:2em;}
+}
+
+.form_list{
+	width:800px;margin:0 auto;
+	@include respond-to('ly-l'){
+		width: auto;
+	}
+	> p + ul{margin-top: 1em;}
+	> ul{
+		border: 1px solid #aaa;border-width:1px 0;padding: 1.25em 0;
+		> li{
+			&:after{
+				@include clearFix;
+			}
+			+ li {margin-top: 10px;}
+			> strong{
+				float: left;display: inline-block;width: 8em;padding: 0.5em 1em;color: $color-black;
+				@include respond-to('ly-m'){
+					width: 5em;padding:0.5em 0;
+				}
+				+ div{
+					margin-left: 10em;
+					@include respond-to('ly-m'){
+						margin-left: 5em;
+					}				
+				}
+			}
+			> .txt{
+				line-height: 40px;
+				@include respond-to('ly-m'){
+					line-height: 30px;
+				}
+			}
+			.inp_wid{padding-right: 120px;
+				@include respond-to('ly-m'){
+					padding-right: 85px;
+				}
+				+ .inp_btn,
+				+ .inp_wid{margin-top: 10px;}
+			}
+			.inp_btn{
+				> .inp_wid{padding-right: 0;}
+				+ .inp_btn,
+				+ .inp_wid{margin-top: 10px;}
+			}
+			&.marketing{margin: 2em 0 1em;
+				.inp_wid{padding:0;}
+			}
+		}
+	}
+	h4{
+		margin-bottom:0.5em;font-size: 1.25em;color: $color-black;
+	}
+}
+.sns_member{
+	overflow: hidden;
+	> strong{
+		display:block;float: left;line-height: 40px;color: $color-black;
+		@include respond-to('ly-m'){
+			line-height: 25px;
+		}
+	}
+	> span{float: right;margin-right: -5px;
+		> a{
+			float: right;display:block;margin:0 5px;
+			&.naver{@include getSprite($member-join_naver);}
+			&.kakao{@include getSprite($member-join_kakao);}
+			&.facebook{@include getSprite($member-join_facebook);}
+			@include respond-to('ly-m'){
+				&.naver{@include getSpriteRetina($member-join_naver_m);}
+				&.kakao{@include getSpriteRetina($member-join_kakao_m);}
+				&.facebook{@include getSpriteRetina($member-join_facebook_m);}
+			}
+		}
+	}
+}
+
+.pw_change{
+	width: 460px; margin: 3em auto;	
+	@include respond-to('ly-s'){
+		width: auto;
+	}
+	> h4{color: $color-black;font-size: 1.25em;padding-bottom:0.5em;}
+	> ul{margin: 2em 0;
+		li{
+			+li{margin-top: 0.5em;}
+			&:last-child{margin-top: 1em;}
+			> strong{
+				float: left;display: block;width: 7em;color: $color-black;line-height: 40px;
+				@include respond-to('ly-m'){
+					line-height: 30px;
+				}
+			}
+			> div{margin-left: 7em;}
+		}
+	}
+	> div{
+		font-size: 0.875em;
+	}
+}
+.pw_change_wrap h4{padding-bottom: 0.75em;}
+
+.login_form{
+	position: relative;margin-bottom: 1.5em;
+	> li{
+		padding-right: 110px;
+		@include respond-to('ly-m'){
+			padding-right: 80px;
+		}
+		+ li{margin-top: 10px;}
+		> .input{width: 100%;}
+		&.btn{
+			position: absolute;right: 0;top: 0;margin: 0;padding: 0;width: 90px;
+			@include respond-to('ly-m'){
+				width: 70px;
+			}
+			.button{
+				width: 100%;padding: 0;line-height: 88px;font-size: 1.25em;font-weight: bold;
+				@include respond-to('ly-m'){
+					line-height: 68px;
+				}
+			}
+		}
+		&.chk{padding: 5px 0;}
+		&.inp{
+			position: relative;
+			> .inp_wid{margin: 0;}
+			> .button{
+				position: absolute;right: 0;top: 0;padding: 0;width: 105px;
+				@include respond-to('ly-m'){
+					width: 75px;
+				}
+			}
+		}
+	}
+}
+
+.serch_box{
+    margin-bottom: 3em;text-align: center;
+    @include respond-to('ly-m') {
+        text-align: left;
+	}
+	> p{font-size:0.875em;margin-top: 1em;}
+    > span{
+        display:inline-block;
+        padding: 5px 10px;
+        @include respond-to('ly-m') {
+            position: relative;display:block;padding:5px 90px 5px 0px;
+        }
+        > .input{
+            width: 200px;
+            @include respond-to('ly-m') {
+                width: 100%;
+            }
+        }
+    }
+    .inp_wid{
+        width: 300px;margin: 0 10px;
+        @include respond-to('ly-m') {
+            width: 100%;margin: 0;
+        } 
+    }
+    .button{
+        width: 120px;padding: 0;
+        @include respond-to('ly-m') {
+            position: absolute;right: 0;top: 5px;width: 80px;
+        }
+    }
+}
+
+.coupon_store{
+	padding-left: 1em;
+	li{
+		+li{margin-top: 1.75em;}
+		> strong{position: relative;display: block;color: $color-black;margin-bottom: 0.4em;
+			&:before{
+				content:'';display: block;position: absolute;width: 4px;height: 4px;left: -0.6em;top: 50%;margin-top: -2px;border-radius: 50%;background:$color-red;
+			}
+		}
+		p, div{font-size: 0.875em;padding: 0.1em 0;}
+	}
+}
